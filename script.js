@@ -1,11 +1,11 @@
-// 🌙 Dark / Light mode
+// modo oscuro/claro
 const themeBtn = document.getElementById("toggle-theme");
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// 📂 Cargar proyectos desde JSON
+// cargar proyectos desde el json
 async function loadProjects() {
   const res = await fetch("projects.json");
   const projects = await res.json();
