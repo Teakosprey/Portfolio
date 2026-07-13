@@ -43,7 +43,8 @@ nav a {
 
 nav a:hover {
   color: #279af1;
-  transition: color 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.6s ease-in-out;
 }
 
 nav a.active {
@@ -52,13 +53,39 @@ nav a.active {
 }
 
 section {
-  padding: 3.5rem;
+  padding: 2rem;
 }
 
 span {
   font-size: 24px;
   font-style: bold;
   padding: 10px;
+}
+
+svg {
+  margin: 20px;
+  display: inline;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+#profile-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(39, 154, 241, 0.5);
+    
+  /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; 
+}
+
+#profile-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
 }
 
 #title {
@@ -86,21 +113,10 @@ span {
   margin-top: 2px;
 }
 
-#profile-img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  box-shadow: 0 0 50px rgba(39, 154, 241, 0.5);
-  display: block;
-    
-  /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
-  -webkit-user-select: none; /* Safari */
-  user-select: none; 
-}
-
-#profile-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.5s ease-in-out;
+#buttons {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 #contact a {
@@ -125,4 +141,19 @@ span {
 
 .project-card:hover {
   transform: scale(1.03);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 8px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  border-color: #279af1;
+  border-radius: 5px;
+  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
 }
