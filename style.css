@@ -26,7 +26,7 @@ header {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   color: #ffffff;
   padding: 15px 0;
@@ -88,6 +88,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 0;
+  z-index: 1000;
 }
 
 .about-me {
@@ -95,6 +97,11 @@ footer {
   justify-content: top;
   align-items: space-between;
   width: 100%;
+}
+
+.about-me h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #profile-img {
@@ -156,6 +163,7 @@ footer {
   color: #ffffff;
   background-color: #1f1f1f;
   border-color: #279af1;
+  border-width: 20px;
   border-radius: 5px;
   text-decoration: none; /* Asegura que el enlace no tenga subrayado */
 }
