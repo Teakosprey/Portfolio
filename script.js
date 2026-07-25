@@ -51,4 +51,52 @@ secciones.forEach((seccion) => {
   observer.observe(seccion);
 });
 
+const inputNombre = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputMensaje = document.getElementById('message');
+
+if (inputNombre && inputEmail && inputMensaje) {
+  // Cambiar el texto cuando el campo está vacío al enviar
+  inputNombre.addEventListener('invalid', function() {
+    inputNombre.setCustomValidity('Por favor, escribe tu nombre aquí, es obligatorio.');
+  });
+  inputEmail.addEventListener('invalid', function() {
+    inputEmail.setCustomValidity('Por favor, escribe tu correo electrónico aquí, es obligatorio.');
+  });
+  inputMensaje.addEventListener('invalid', function() {
+    inputMensaje.setCustomValidity('Por favor, escribe tu mensaje aquí, es obligatorio.');
+  });
+
+  // Limpiar el mensaje cuando el usuario empieza a escribir
+  inputNombre.addEventListener('input', function() {
+    inputNombre.setCustomValidity('');
+  });
+  inputEmail.addEventListener('input', function() {
+    inputEmail.setCustomValidity('');
+  });
+  inputMensaje.addEventListener('input', function() {
+    inputMensaje.setCustomValidity('');
+  });
+}
+
+const form = document.getElementById('contact-form');
+
+if (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('name')?.value.trim() || '';
+    const correo = document.getElementById('email')?.value.trim() || '';
+    const mensaje = document.getElementById('message')?.value.trim() || '';
+
+    const asunto = encodeURIComponent(`Nuevo mensaje desde tu portafolio de ${nombre}`);
+    const cuerpo = encodeURIComponent(
+      `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`
+    );
+
+    window.location.href = `mailto:said200318@outlook.com?subject=${asunto}&body=${cuerpo}`;
+    form.reset();
+  });
+}
+
 loadProjects();

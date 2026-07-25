@@ -25,11 +25,11 @@
     <h1>DESARROLLADOR FRONTEND</h1>
   <h2>ABDIEL HERNÁNDEZ</h2>
     <div id="buttons">
-      <a class="btn" href="Resources/Abdiel_Hernandez_CV.pdf" download>
+      <a class="title-btn" href="Resources/Abdiel_Hernandez_CV.pdf" download>
         <img src="Resources/cv.svg" alt="CV" width="30" height="30">
         <span>Descargar CV</span>
       </a>
-      <a class="btn" href="https://www.linkedin.com/in/abdiel-said-hern%C3%A1ndez-mart%C3%ADnez-bb8a19309/?skipRedirect=true" target="_blank">
+      <a class="title-btn" href="https://www.linkedin.com/in/abdiel-said-hern%C3%A1ndez-mart%C3%ADnez-bb8a19309/?skipRedirect=true" target="_blank">
         <img src="Resources/linkedin.svg" alt="LinkedIn" width="30" height="30">
         <span>LinkedIn</span>
       </a>
@@ -56,7 +56,12 @@
 
   <section id="contact">
     <h2>Contacto</h2> 
-    <p>Puedes escribirme a <a href="mailto:said200318@outlook.com">mi correo</a> o mediante <a href="https://www.whatsappto.com/7821004745" target="_blank">Whatsapp.</a></p>
+    <form id="contact-form">
+      <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
+      <input class="form-control" type="email" id="email" name="email" placeholder="Correo electrónico" required>
+      <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
+      <button id="send" type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
