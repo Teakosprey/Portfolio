@@ -1,0 +1,87 @@
+span {
+  font-size: 22px;
+  font-style: bold;
+  padding: 8px 20px;
+}
+
+svg {
+  margin: 20px;
+  display: inline;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+#profile-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(53, 144, 213, 0.4);
+    
+  /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; 
+}
+
+#profile-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#title h1 {
+  font-size: 52px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #279af1;
+  margin-top: 30px;
+}
+
+#title h2 {
+  font-size: 46px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 2px;
+  padding: 0px !important;
+}
+
+#buttons {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.title-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 8px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  border-color: #279af1;
+  border-width: 20px;
+  border-radius: 5px;
+  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
+}
+
+.title-btn:hover {
+  background-color: #ebebeb;
+  color: #2d65bd;
+  transform: scale(1.03);
+  transition: transform .5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}

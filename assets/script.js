@@ -1,6 +1,6 @@
 // cargar proyectos desde el json
 async function loadProjects() {
-  const res = await fetch("projects.json");
+  const res = await fetch("./projects.json");
   const projects = await res.json();
   const container = document.getElementById("project-list");
 
@@ -81,7 +81,7 @@ if (inputNombre && inputEmail && inputMensaje) {
 
 const send = document.getElementById('send');
 
-if (name && email && message) {
+if (send && inputNombre && inputEmail && inputMensaje) {
   send.addEventListener('click', function() {
     alert("Tu correo ha sido enviado, te responderé a la brevedad :)");
   });
