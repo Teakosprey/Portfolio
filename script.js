@@ -79,6 +79,14 @@ if (inputNombre && inputEmail && inputMensaje) {
   });
 }
 
+const send = document.getElementById('send');
+
+if (name && email && message) {
+  send.addEventListener('click', function() {
+    alert("Tu correo ha sido enviado, te responderé a la brevedad :)");
+  });
+}
+
 const form = document.getElementById('contact-form');
 
 if (form) {
@@ -89,9 +97,9 @@ if (form) {
     const correo = document.getElementById('email')?.value.trim() || '';
     const mensaje = document.getElementById('message')?.value.trim() || '';
 
-    const asunto = encodeURIComponent(`Nuevo mensaje desde tu portafolio de ${nombre}`);
+    const asunto = encodeURIComponent(`Mensaje de ${nombre} desde tu portafolio`);
     const cuerpo = encodeURIComponent(
-      `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`
+      `${mensaje}`
     );
 
     window.location.href = `mailto:said200318@outlook.com?subject=${asunto}&body=${cuerpo}`;
