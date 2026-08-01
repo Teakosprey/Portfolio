@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 40px;
+  scroll-padding-top: 30px;
 }
 
 body {
@@ -33,7 +33,7 @@ h2 {
 }
 
 section {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 30px;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
