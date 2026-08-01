@@ -1,5 +1,5 @@
 span {
-  font-size: 22px;
+  font-size: 1rem;
   font-style: bold;
   padding: 8px 20px;
 }
@@ -15,11 +15,11 @@ svg:hover {
 }
 
 #profile-img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  box-shadow: 0 0 50px rgba(53, 144, 213, 0.4);
-    
+  width: 30%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  mask-image: radial-gradient(#121212 55%, transparent 60%);
+
   /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
   -webkit-user-select: none; /* Safari */
   user-select: none; 
@@ -30,29 +30,29 @@ svg:hover {
   transition: transform 0.5s ease-in-out;
 }
 
-#title {
+#hero {
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
-#title h1 {
-  font-size: 52px;
+#hero h1 {
+  font-size: 3rem;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  color: #279af1;
+  color: var(--primary-color);
   margin-top: 30px;
 }
 
-#title h2 {
-  font-size: 46px;
+#hero h2 {
+  font-size: 3rem;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-color);
   margin-top: 2px;
   padding: 0px !important;
 }
@@ -63,25 +63,25 @@ svg:hover {
   margin-top: 10px;
 }
 
-.title-btn {
+.hero-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
   margin: 10px;
-  font-size: 8px;
+  font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #1f1f1f;
-  border-color: #279af1;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
   border-width: 20px;
   border-radius: 5px;
   text-decoration: none; /* Asegura que el enlace no tenga subrayado */
 }
 
-.title-btn:hover {
-  background-color: #ebebeb;
-  color: #2d65bd;
+.hero-btn:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
   transform: scale(1.03);
   transition: transform .5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }

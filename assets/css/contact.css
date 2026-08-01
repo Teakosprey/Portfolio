@@ -1,16 +1,14 @@
-
-#contact a {
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: #279af1;
+#contact {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 40px;
 }
 
 #contact h2 {
   font-size: 36px;
   text-align: center;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-color);
   padding: 20px 0;
   margin: 10px 0;
 }
@@ -21,7 +19,7 @@
   width: 60%;
   margin: 40px auto;
   padding: 20px;
-  background-color: #1f1f1f;
+  background-color: var(--secondary-color);
   align-items: center;
   margin-top: 20px;
   border-radius: 10px;
@@ -34,8 +32,8 @@
   margin-top: 50px;
   border: 1px solid #2e2e2e;
   border-radius: 10px;
-  background-color: #1f1f1f;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 #message {
@@ -49,7 +47,7 @@
 
 .form-control:focus {
   outline: none;
-  border: 1px solid #279af1;
+  border: 1px solid var(--primary-color);
 }
 
 #send {
@@ -57,10 +55,10 @@
   margin-top: 80px;
   margin-bottom: 20px;
   padding: 15px 0;
-  background-color: #279af1;
+  background-color: var(--primary-color);
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;

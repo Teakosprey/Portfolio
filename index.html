@@ -10,26 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body  id="start">
+<body id="start">
   <header>
     <nav>
       <a href="#start">Inicio</a>
       <a href="#about">Sobre mí</a>
       <a href="#projects">Proyectos</a>
+      <a href="#technologies">Tecnologías</a>
+      <a href="#experience">Experiencia</a>
       <a href="#contact">Contacto</a>
     </nav>
   </header>
   
-  <section  id="title">
-    <img src="assets/images/profile.jpeg" alt="Foto de perfil" draggable="false" id="profile-img" >
-    <h1>DESARROLLADOR FRONTEND</h1>
-  <h2>ABDIEL HERNÁNDEZ</h2>
+  <section id="hero">
+    <img src="assets/images/profile.webp" alt="Foto de perfil" draggable="false" id="profile-img" >
+    <h1>Hola, soy Abdiel</h1>
+    <h2>Ingeniero en Sistemas Computacionales</h2>
     <div id="buttons">
-      <a class="title-btn" href="assets/documents/Abdiel_Hernandez_CV.pdf" download>
+      <a class="hero-btn" href="assets/documents/Abdiel_Hernandez_CV.pdf" download>
         <img src="assets/icons/cv.svg" alt="CV" width="30" height="30">
         <span>Descargar CV</span>
       </a>
-      <a class="title-btn" href="https://www.linkedin.com/in/abdiel-said-hern%C3%A1ndez-mart%C3%ADnez-bb8a19309/?skipRedirect=true" target="_blank">
+      <a class="hero-btn" href="https://www.linkedin.com/in/abdiel-said-hern%C3%A1ndez-mart%C3%ADnez-bb8a19309/?skipRedirect=true" target="_blank">
         <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
         <span>LinkedIn</span>
       </a>
@@ -37,25 +39,32 @@
   </section>
 
   <section id="about">
-    <div class="about-me">
-      <h2>Sobre mí</h2>
-      <p>Mi nombre es Abdiel Said Hernández Martínez y soy ingeniero en Sistemas Computacionales.</p><br>
-      <p>Me especializo en el desarrollo web Frontend, con el objetivo de llegar a ser Desarrollador Full Stack, por lo que me mantengo en constante aprendizaje de nuevas tecnologías y metodologías ya sea Frontend o Backend.</p><br> 
-      <p>De igual manera, tengo experiencia en la rama de redes informáticas, mantenimiento de equipos y soporte técnico.</p>
-    </div>
-    <div class="about-me">
-      <h2>Experiencia</h2>
-      <p>Auxiliar de TI en la Universidad de Oriente - Campus Poza Rica (2025 - 2026).</p>
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="about-content">
+        <p>Mi nombre es Abdiel Said Hernández Martínez y soy ingeniero en Sistemas Computacionales.</p><br>
+        <p>Me especializo en el desarrollo web Frontend, con el objetivo de llegar a ser Desarrollador Full Stack, por lo que me mantengo en constante aprendizaje de nuevas tecnologías y metodologías ya sea Frontend o Backend.</p><br>
+        <p>De igual manera, tengo experiencia en la rama de redes informáticas, mantenimiento de equipos y soporte técnico.</p>
+      </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Proyectos</h2>
+    <h2 class="section-title">Proyectos</h2>
     <div id="project-list"></div>
   </section>
 
+  <section id="technologies">
+    <h2 class="section-title">Tecnologías</h2>
+    <div id="technology-list"></div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Experiencia</h2>
+    <div id="experience-list"></div>
+  </section>
+
   <section id="contact">
-    <h2>Contacto</h2> 
+    <h2 class="section-title">Contacto</h2> 
     <form id="contact-form">
       <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
       <input class="form-control" type="email" id="email" name="email" placeholder="Correo electrónico" required>

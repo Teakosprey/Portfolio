@@ -1,25 +1,12 @@
-
-.about-me {
+.about-content {
   padding: 0 3%;
   justify-content: top;
   align-items: space-between;
   width: 100%;
 }
 
-.about-me h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#about {
-  display: inline-flex;
-  flex-direction: row;
-  margin-top: 40px;
-  padding: 40px;
-}
-
 #about p {
   font-size: 18px;
   line-height: 1.8;
-  color: #ffffff;
+  color: var(--text-color);
 }
