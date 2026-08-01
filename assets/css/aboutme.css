@@ -1,12 +1,13 @@
 .about-content {
-  padding: 0 3%;
-  justify-content: top;
-  align-items: space-between;
-  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 5rem;
+  width: 60%;
+  margin: auto;
+  border-radius: var(--border-radius);
 }
 
 #about p {
-  font-size: 18px;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--text-color);
 }
