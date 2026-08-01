@@ -79,14 +79,6 @@ if (inputNombre && inputEmail && inputMensaje) {
   });
 }
 
-const send = document.getElementById('send');
-
-if (send && inputNombre && inputEmail && inputMensaje) {
-  send.addEventListener('click', function() {
-    alert("Tu correo ha sido enviado, te responderé a la brevedad :)");
-  });
-}
-
 const form = document.getElementById('contact-form');
 
 if (form) {
