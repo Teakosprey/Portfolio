@@ -11,7 +11,7 @@ async function loadProjects() {
       <h3>${p.name}</h3><br>
       <img src="${p.image}" alt="${p.name}" style="width: 100%; height: auto; border-radius: 10px;"><br><br>
       <p>${p.description}</p><br>
-      <a href="${p.link}" target="_blank" style="text-decoration: none; color: #279af1; font-weight: bold;">Ver proyecto</a>
+      <a href="${p.link}" target="_blank" style="text-decoration: none; color: #0966c3; font-weight: bold;">Ver proyecto</a>
     `;
     container.appendChild(card);
   });
