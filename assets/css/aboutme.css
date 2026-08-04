@@ -19,13 +19,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  margin-right: 2.5rem;
+  width: 35%;
+  margin-right: 2rem;
 }
 
 .about-text {
-  width: 60%;
-  font-size: 1.25rem;
+  width: 65%;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-color);
 }

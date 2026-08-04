@@ -11,7 +11,7 @@ async function loadProjects() {
       <h3>${p.name}</h3><br>
       <img src="${p.image}" alt="${p.name}" style="width: 100%; height: auto; border-radius: 10px;"><br><br>
       <p>${p.description}</p><br>
-      <a href="${p.link}" target="_blank" style="text-decoration: none; color: #0966c3; font-weight: bold;">Ver proyecto</a>
+      <a href="${p.link}" target="_blank" style="text-decoration: none; color: var(--primary-color); font-weight: bold;">Ver proyecto</a>
     `;
     container.appendChild(card);
   });
@@ -27,29 +27,59 @@ const opciones = {
   threshold: 0.8 // Se activa cuando el 80% de la sección es visible
 };
 
-const observer = new IntersectionObserver((entradas) => {
-  entradas.forEach((entrada) => {
-    // Si la sección está visible en la pantalla
-    if (entrada.isIntersecting) {
-      const id = entrada.target.getAttribute("id");
+const nav = document.querySelector("nav");
+const navLinks = [...document.querySelectorAll("nav a")];
 
-      // Quita la clase activa de todos los enlaces
-      enlaces.forEach((enlace) => {
-        enlace.classList.remove("active");
-      });
+if (nav && navLinks.length) {
+  const indicator = document.createElement("span");
+  indicator.classList.add("nav-indicator");
+  nav.appendChild(indicator);
 
-      // Añade la clase activa solo al enlace que corresponde
-      const enlaceActivo = document.querySelector(`nav a[href="#${id}"]`);
-      if (enlaceActivo) {
-        enlaceActivo.classList.add("active");
-      }
-    }
+  function showIndicator(link) {
+    const navRect = nav.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const offsetLeft = linkRect.left - navRect.left;
+
+    indicator.style.width = `${linkRect.width}px`;
+    indicator.style.transform = `translate(${offsetLeft}px, -50%)`;
+    indicator.style.opacity = "1";
+  }
+
+  function hideIndicator() {
+    indicator.style.opacity = "0";
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseenter", () => showIndicator(link));
+    link.addEventListener("focus", () => showIndicator(link));
+    link.addEventListener("mouseleave", hideIndicator);
+    link.addEventListener("blur", hideIndicator);
   });
-}, opciones);
 
-secciones.forEach((seccion) => {
-  observer.observe(seccion);
-});
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      // Si la sección está visible en la pantalla
+      if (entrada.isIntersecting) {
+        const id = entrada.target.getAttribute("id");
+
+        // Quita la clase activa de todos los enlaces
+        navLinks.forEach((enlace) => {
+          enlace.classList.remove("active");
+        });
+
+        // Añade la clase activa solo al enlace que corresponde
+        const enlaceActivo = document.querySelector(`nav a[href="#${id}"]`);
+        if (enlaceActivo) {
+          enlaceActivo.classList.add("active");
+        }
+      }
+    });
+  }, opciones);
+
+  secciones.forEach((seccion) => {
+    observer.observe(seccion);
+  });
+}
 
 const inputNombre = document.getElementById('name');
 const inputEmail = document.getElementById('email');
