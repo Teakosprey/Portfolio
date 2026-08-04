@@ -19,7 +19,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.2rem;
 }
 
 .nav-indicator {
@@ -50,6 +49,8 @@ nav a {
 
 nav a:hover {
   color: var(--primary-color);
+  transform: scaleX(1);
+  transform-origin: center;
 }
 
 nav a.active {

@@ -1,6 +1,7 @@
 :root {
   --primary-color: #449667;
   --secondary-color: #0F1720;
+  --hover-color: #2e2f2f;
   --text-color: #ffffff;
   --background-color: #202A34;
   --border-radius: 15px;
@@ -39,7 +40,7 @@ section {
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-color);
-    margin: 20px;
-    padding: 20px;
+    margin: 3rem;
+    padding: 3rem;
     text-align: center;
 }

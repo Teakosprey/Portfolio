@@ -109,6 +109,36 @@ if (inputNombre && inputEmail && inputMensaje) {
   });
 }
 
+const iconContainer = document.getElementById('icons-container');
+const iconLinks = [...document.querySelectorAll('.icon-link')];
+
+if (iconContainer && iconLinks.length) {
+  const iconIndicator = document.createElement('span');
+  iconIndicator.classList.add('icon-indicator');
+  iconContainer.appendChild(iconIndicator);
+
+  function moveIconIndicator(link) {
+    const containerRect = iconContainer.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const offsetLeft = linkRect.left - containerRect.left;
+
+    iconIndicator.style.width = `${linkRect.width}px`;
+    iconIndicator.style.transform = `translateX(${offsetLeft}px)`;
+    iconIndicator.style.opacity = '1';
+  }
+
+  function hideIconIndicator() {
+    iconIndicator.style.opacity = '0';
+  }
+
+  iconLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => moveIconIndicator(link));
+    link.addEventListener('focus', () => moveIconIndicator(link));
+    link.addEventListener('mouseleave', hideIconIndicator);
+    link.addEventListener('blur', hideIconIndicator);
+  });
+}
+
 const form = document.getElementById('contact-form');
 
 if (form) {

@@ -4,22 +4,11 @@ span {
   padding: 8px 20px;
 }
 
-svg {
-  margin: 20px;
-  display: inline;
-}
-
-svg:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
-}
-
 #profile-img {
   width: 30%;
   aspect-ratio: 1/1;
   object-fit: contain;
   mask-image: radial-gradient(#121212 55%, transparent 60%);
-
   /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
   -webkit-user-select: none; /* Safari */
   user-select: none; 
@@ -44,7 +33,7 @@ svg:hover {
   align-items: center;
   font-weight: bold;
   color: var(--primary-color);
-  margin-top: 30px;
+  margin-top: .5rem;
 }
 
 #hero h2 {
@@ -54,13 +43,64 @@ svg:hover {
   font-weight: bold;
   color: var(--text-color);
   margin-top: 2px;
+  margin-bottom: 1rem;
   padding: 0px !important;
 }
 
-#buttons {
-  display: inline-flex;
+#icons-container {
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  width: 50%;
+  height: 40%;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.icon-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--hover-color);
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), width 0.35s ease, opacity 0.2s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.icon-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  background: transparent;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.icon-link:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.icon-link:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.icon-link:hover {
+  color: var(--primary-color);
+  transform: scale(1.03);
+  transition: transform .5s ease-in-out, color 0.4s ease;
 }
 
 .hero-btn {
@@ -68,7 +108,7 @@ svg:hover {
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  margin: 10px;
+  margin: .5rem 0;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--text-color);
@@ -80,7 +120,7 @@ svg:hover {
 }
 
 .hero-btn:hover {
-  background-color: var(--text-color);
+  background-color: var(--hover-color);
   color: var(--primary-color);
   transform: scale(1.03);
   transition: transform .5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
