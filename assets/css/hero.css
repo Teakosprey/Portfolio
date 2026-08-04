@@ -52,8 +52,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 40%;
+  width: 40%;
   background: var(--secondary-color);
   border-radius: 12px;
   overflow: hidden;
@@ -104,24 +103,42 @@ span {
 }
 
 .hero-btn {
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   padding: 10px 20px;
-  margin: .5rem 0;
+  margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--text-color);
   background-color: var(--secondary-color);
   border-color: var(--primary-color);
-  border-width: 20px;
   border-radius: 5px;
-  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hover-color);
+  transform: scaleX(0);
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.hero-btn:hover::before {
+  transform: scaleX(1);
 }
 
 .hero-btn:hover {
-  background-color: var(--hover-color);
   color: var(--primary-color);
   transform: scale(1.03);
-  transition: transform .5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: transform .5s ease-in-out, color 0.4s ease;
 }
