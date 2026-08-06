@@ -8,10 +8,19 @@ async function loadProjects() {
     const card = document.createElement("div");
     card.className = "project-card";
     card.innerHTML = `
-      <h3>${p.name}</h3><br>
-      <img src="${p.image}" alt="${p.name}" style="width: 100%; height: auto; border-radius: 10px;"><br><br>
-      <p>${p.description}</p><br>
-      <a href="${p.link}" target="_blank" style="text-decoration: none; color: var(--primary-color); font-weight: bold;">Ver proyecto</a>
+      <h3 class="card-title">${p.name}</h3><br>
+      <img src="${p.image}" alt="${p.name}" class="card-image"><br><br>
+      <p class="card-description">${p.description}</p><br>
+      <div class="card-container"><br>
+      <img class="card-icon-link" src="/assets/icons/html.svg" alt="html"><br>
+      <img class="card-icon-link" src="/assets/icons/css.svg" alt="css"><br>
+      <img class="card-icon-link" src="/assets/icons/js.svg" alt="javascript"><br>
+      <img class="card-icon-link" src="/assets/icons/react.svg" alt="react"><br>
+      <img class="card-icon-link" src="/assets/icons/tailwind.svg" alt="tailwind"><br>
+      </div><br>
+      <div class="card-container"><br>
+      <a href="${p.link}" class="card-link" target="_blank">Ver proyecto</a>
+      </div>
     `;
     container.appendChild(card);
   });

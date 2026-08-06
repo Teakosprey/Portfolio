@@ -32,6 +32,7 @@ span {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  text-shadow: var(--text-shadow);
   color: var(--primary-color);
   margin-top: .5rem;
 }
@@ -40,11 +41,14 @@ span {
   font-size: 3rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  text-wrap: balance;
   font-weight: bold;
+  text-shadow: var(--text-shadow);
   color: var(--text-color);
   margin-top: 2px;
   margin-bottom: 1rem;
-  padding: 0px !important;
+  padding: 0;
 }
 
 #icons-container {
@@ -54,7 +58,7 @@ span {
   justify-content: center;
   width: 40%;
   background: var(--secondary-color);
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
@@ -116,7 +120,7 @@ span {
   color: var(--text-color);
   background-color: var(--secondary-color);
   border-color: var(--primary-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   text-decoration: none;
   overflow: hidden;
   transition: color 0.4s ease;

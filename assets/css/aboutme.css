@@ -3,17 +3,13 @@
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
   padding: 5rem;
   width: 80%;
   margin: auto;
   border-radius: var(--border-radius);
 }
 
-.about-content:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0px 4px 6px rgba(4, 1, 22, 0.9);
-}
 .about-image {
   flex: 1;
   display: flex;

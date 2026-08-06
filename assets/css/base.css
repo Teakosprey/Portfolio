@@ -3,7 +3,9 @@
   --secondary-color: #0F1720;
   --hover-color: #2e2f2f;
   --text-color: #ffffff;
+  --text-shadow: 3px 0 #2e2f2f, 0 1px #2e2f2f, 1px 0 #2e2f2f, 0 2px #2e2f2f;
   --background-color: #202A34;
+  --box-shadow: 4px 6px 10px #000000;
   --border-radius: 15px;
 }
 
@@ -39,6 +41,7 @@ section {
 .section-title {
     font-size: 2rem;
     font-weight: bold;
+    text-shadow: var(--text-shadow);
     color: var(--text-color);
     margin: 3rem;
     padding: 3rem;
