@@ -51,6 +51,151 @@ span {
   padding: 0;
 }
 
+.email-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.email-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.email-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.email-modal__content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  padding: 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(30, 41, 59, 0.96));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+
+.email-modal.is-open .email-modal__content {
+  transform: translateY(0) scale(1);
+}
+
+.email-modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.email-modal__pill {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.2);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.email-modal__content h3 {
+  margin-bottom: 0.4rem;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.email-modal__content p {
+  margin: 0.4rem 0 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.email-modal__card {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.email-modal__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.email-modal__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.email-modal__copy,
+.email-modal__open {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.email-modal__copy {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.email-modal__open {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.email-modal__copy:hover,
+.email-modal__open:hover {
+  transform: translateY(-2px);
+}
+
+.email-modal__copy.is-copied {
+  background: #10b981;
+}
+
+.email-modal__status {
+  min-height: 1.25rem;
+  margin-top: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .email-modal__content {
+    padding: 1.4rem;
+  }
+
+  .email-modal__actions {
+    flex-direction: column;
+  }
+}
+
 #icons-container {
   position: relative;
   display: flex;
