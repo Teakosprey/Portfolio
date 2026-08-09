@@ -36,10 +36,10 @@
         <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="35" height="35">
       </a>
     </div>
-    <a class="hero-btn" href="assets/docs/Abdiel_Hernández_CV.pdf" download>
-        <img src="assets/icons/cv.svg" alt="CV" width="35" height="35">
-        <span>Descargar CV</span>
-    </a>
+    <button class="hero-btn cv-trigger" type="button" aria-haspopup="dialog" aria-controls="cv-modal">
+      <img src="assets/icons/cv.svg" alt="CV" width="35" height="35">
+      <span>Descargar CV</span>
+    </button>
   </section>
 
   <div id="email-modal" class="email-modal" role="dialog" aria-modal="true" aria-labelledby="email-modal-title" aria-describedby="email-modal-description">
@@ -58,6 +58,27 @@
         <button class="email-modal__copy" type="button">Copiar correo</button>
       </div>
       <p class="email-modal__status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div id="cv-modal" class="email-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" aria-describedby="cv-modal-description">
+    <div class="email-modal__backdrop" data-close-modal></div>
+    <div class="email-modal__content cv-modal__content">
+      <button class="email-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
+      <span class="email-modal__pill">Selecciona tu idioma</span>
+      <h3 id="cv-modal-title">Descargar CV</h3>
+      <p id="cv-modal-description">Elige la versión que prefieras para descargar tu currículum.</p>
+
+      <div class="cv-modal__actions">
+        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_ES_CV.pdf" download>
+          <span class="cv-modal__flag">🇲🇽</span>
+          <span>Español</span>
+        </a>
+        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_EN_CV.pdf" download>
+          <span class="cv-modal__flag">🇺🇸</span>
+          <span>English</span>
+        </a>
+      </div>
     </div>
   </div>
 

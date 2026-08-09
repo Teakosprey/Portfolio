@@ -202,6 +202,7 @@ span {
   background: var(--secondary-color);
   border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .icon-indicator {
@@ -254,18 +255,49 @@ span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   padding: 10px 20px;
-  margin: 1rem 0;
+  margin: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--text-color);
-  background-color: var(--secondary-color);
-  border-color: var(--primary-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: var(--border-radius);
   text-decoration: none;
   overflow: hidden;
-  transition: color 0.4s ease;
+  transition: color 0.4s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.cv-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cv-modal__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.cv-modal__option:hover {
+  background: rgba(79, 70, 229, 0.2);
+  transform: translateY(-1px);
+}
+
+.cv-modal__flag {
+  font-size: 2rem;
 }
 
 .hero-btn::before {

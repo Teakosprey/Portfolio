@@ -126,6 +126,8 @@ const emailModal = document.getElementById('email-modal');
 const emailCopyButton = document.querySelector('.email-modal__copy');
 const emailOpenButton = document.querySelector('.email-modal__open');
 const emailStatus = document.querySelector('.email-modal__status');
+const cvTrigger = document.querySelector('.cv-trigger');
+const cvModal = document.getElementById('cv-modal');
 
 function openEmailModal() {
   if (!emailModal) return;
@@ -146,6 +148,18 @@ function closeEmailModal() {
   }
 }
 
+function openCvModal() {
+  if (!cvModal) return;
+  cvModal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCvModal() {
+  if (!cvModal) return;
+  cvModal.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
 if (emailLink) {
   emailLink.addEventListener('click', (event) => {
     event.preventDefault();
@@ -157,6 +171,12 @@ if (emailLink) {
       event.preventDefault();
       openEmailModal();
     }
+  });
+}
+
+if (cvTrigger) {
+  cvTrigger.addEventListener('click', () => {
+    openCvModal();
   });
 }
 
@@ -196,7 +216,10 @@ if (emailOpenButton) {
 }
 
 document.querySelectorAll('[data-close-modal]').forEach((button) => {
-  button.addEventListener('click', closeEmailModal);
+  button.addEventListener('click', () => {
+    closeEmailModal();
+    closeCvModal();
+  });
 });
 
 if (emailModal) {
@@ -207,9 +230,18 @@ if (emailModal) {
   });
 }
 
+if (cvModal) {
+  cvModal.addEventListener('click', (event) => {
+    if (event.target === cvModal) {
+      closeCvModal();
+    }
+  });
+}
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeEmailModal();
+    closeCvModal();
   }
 });
 
