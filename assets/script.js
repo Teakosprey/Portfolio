@@ -179,7 +179,7 @@ if (emailCopyButton) {
       emailCopyButton.classList.add('is-copied');
       emailCopyButton.textContent = '¡Copiado!';
       if (emailStatus) {
-        emailStatus.textContent = 'Correo copiado al portapapeles.';
+        emailStatus.textContent = '¡Correo copiado al portapapeles!';
       }
     } catch (error) {
       if (emailStatus) {

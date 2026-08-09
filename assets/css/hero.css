@@ -130,6 +130,9 @@ span {
 }
 
 .email-modal__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.75rem;
   margin-bottom: 1rem;
   border-radius: 16px;
@@ -138,36 +141,29 @@ span {
 }
 
 .email-modal__image {
-  width: 100%;
+  width: min(100%, 240px);
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .email-modal__actions {
   display: flex;
+  justify-content: center;
   gap: 0.75rem;
 }
 
-.email-modal__copy,
-.email-modal__open {
+.email-modal__copy {
   flex: 1;
+  background: var(--primary-color);
+  color: var(--text-color);
+  margin: 1rem;
   padding: 0.8rem 1rem;
   border: none;
   border-radius: 999px;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.email-modal__copy {
-  background: var(--primary-color);
-  color: var(--text-color);
-}
-
-.email-modal__open {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
-  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .email-modal__copy:hover,
@@ -184,6 +180,7 @@ span {
   margin-top: 0.8rem;
   color: var(--primary-color);
   font-weight: 600;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
