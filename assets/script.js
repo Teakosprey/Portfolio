@@ -33,7 +33,7 @@ const enlaces = document.querySelectorAll("nav a");
 const opciones = {
   root: null, //Usa la pantalla como referencia
   rootMargin: "0px",
-  threshold: 0.8 // Se activa cuando el 80% de la sección es visible
+  threshold: 0.6 // Se activa cuando el 80% de la sección es visible
 };
 
 const nav = document.querySelector("nav");
