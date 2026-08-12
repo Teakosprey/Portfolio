@@ -200,6 +200,7 @@ span {
   justify-content: center;
   width: 40%;
   background: var(--secondary-color);
+  border: var(--border-color);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
@@ -253,7 +254,7 @@ span {
   font-weight: bold;
   color: var(--text-color);
   background: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+  border: var(--border-color);
   border-radius: var(--border-radius);
   text-decoration: none;
   overflow: hidden;

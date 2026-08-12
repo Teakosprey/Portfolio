@@ -4,13 +4,15 @@
     "image": "/assets/images/example.png",
     "description": "Plataforma de juegos en línea que permite a los usuarios jugar y crear juegos multijugador en tiempo real. Incluye características como chat en vivo, tablas de clasificación y personalización de avatares.",
     "technologies": ["react", "tailwind", "typescript"],
-    "link": "https://github.com/Teakosprey/Unbreakable-Games"
+    "link_github": "https://github.com/Teakosprey/Unbreakable-Games",
+    "link_web": "https://github.com/Teakosprey/Unbreakable-Games"
   },
   {
     "name": "Example Project",
     "image": "/assets/images/example.png",
     "description": "Plataforma de juegos en línea que permite a los usuarios jugar y crear juegos multijugador en tiempo real. Incluye características como chat en vivo, tablas de clasificación y personalización de avatares.",
     "technologies": ["html", "css", "js"],
-    "link": "https://github.com/Teakosprey/Unbreakable-Games"
+    "link_github": "https://github.com/Teakosprey/Unbreakable-Games",
+    "link_web": "https://github.com/Teakosprey/Unbreakable-Games"
   }
 ]

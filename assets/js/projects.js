@@ -12,7 +12,7 @@ window.renderProjects = function(projects) {
 
   projects.forEach(p => {
     const techIcons = p.technologies
-      .map(tech => `<img class="card-icon-link" src="./assets/icons/${tech}.svg" draggable="false" alt="${tech}">`)
+      .map(tech => `<img class="card-icon" src="./assets/icons/${tech}.svg" draggable="false" alt="${tech}">`)
       .join("");
 
     const card = document.createElement("div");
@@ -25,7 +25,14 @@ window.renderProjects = function(projects) {
         ${techIcons}
       </div>
       <div class="card-container">
-        <a href="${p.link}" class="card-link" target="_blank">Ver proyecto</a>
+        <a href="${p.link_github}" class="card-link" target="_blank">
+          <img src="assets/icons/github.svg" alt="github" width="30" height="30">
+          <span>Ir al repositorio</span>
+        </a>
+        <a href="${p.link_web}" class="card-link" target="_blank">
+          <img src="assets/icons/web.svg" alt="web" width="30" height="30">
+          <span>Ir a la web</span>
+        </a>
       </div>
     `;
     container.appendChild(card);
