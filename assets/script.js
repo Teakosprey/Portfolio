@@ -12,11 +12,12 @@ async function loadProjects() {
       <img src="${p.image}" alt="${p.name}" class="card-image"><br><br>
       <p class="card-description">${p.description}</p><br>
       <div class="card-container"><br>
-      <img class="card-icon-link" src="/assets/icons/html.svg" alt="html"><br>
-      <img class="card-icon-link" src="/assets/icons/css.svg" alt="css"><br>
-      <img class="card-icon-link" src="/assets/icons/js.svg" alt="javascript"><br>
-      <img class="card-icon-link" src="/assets/icons/react.svg" alt="react"><br>
-      <img class="card-icon-link" src="/assets/icons/tailwind.svg" alt="tailwind"><br>
+      <img class="card-icon-link" src="/assets/icons/html.svg" draggable="false" alt="html"><br>
+      <img class="card-icon-link" src="/assets/icons/css.svg" draggable="false" alt="css"><br>
+      <img class="card-icon-link" src="/assets/icons/js.svg" draggable="false" alt="javascript"><br>
+      <img class="card-icon-link" src="/assets/icons/react.svg" draggable="false" alt="react"><br>
+      <img class="card-icon-link" src="/assets/icons/tailwind.svg" draggable="false" alt="tailwind"><br>
+      <img class="card-icon-link" src="/assets/icons/typescript.svg" draggable="false" alt="typescript"><br>
       </div><br>
       <div class="card-container"><br>
       <a href="${p.link}" class="card-link" target="_blank">Ver proyecto</a>
@@ -118,10 +119,10 @@ if (inputNombre && inputEmail && inputMensaje) {
   });
 }
 
-const iconContainer = document.getElementById('icons-container');
-const iconLinks = [...document.querySelectorAll('.icon-link')];
+const iconContainer = document.getElementById('hero-icons-container');
+const iconLinks = [...document.querySelectorAll('.hero-icon-link')];
 
-const emailLink = document.querySelector('.icon-link.email-link');
+const emailLink = document.querySelector('.hero-icon-link.email-link');
 const emailModal = document.getElementById('email-modal');
 const emailCopyButton = document.querySelector('.email-modal__copy');
 const emailOpenButton = document.querySelector('.email-modal__open');
@@ -209,12 +210,6 @@ if (emailCopyButton) {
   });
 }
 
-if (emailOpenButton) {
-  emailOpenButton.addEventListener('click', () => {
-    window.location.href = 'mailto:said200317@gmail.com?subject=Hola%20Abdiel';
-  });
-}
-
 document.querySelectorAll('[data-close-modal]').forEach((button) => {
   button.addEventListener('click', () => {
     closeEmailModal();
@@ -269,6 +264,36 @@ if (iconContainer && iconLinks.length) {
     link.addEventListener('focus', () => moveIconIndicator(link));
     link.addEventListener('mouseleave', hideIconIndicator);
     link.addEventListener('blur', hideIconIndicator);
+  });
+}
+
+const projectIconContainer = document.getElementById('projects-icons-container');
+const projectIconLinks = [...document.querySelectorAll('.projects-icon-link')];
+
+if (projectIconContainer && projectIconLinks.length) {
+  const projectIconIndicator = document.createElement('span');
+  projectIconIndicator.classList.add('icon-indicator');
+  projectIconContainer.appendChild(projectIconIndicator);
+
+  function moveProjectIconIndicator(link) {
+    const containerRect = projectIconContainer.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const offsetLeft = linkRect.left - containerRect.left;
+
+    projectIconIndicator.style.width = `${linkRect.width}px`;
+    projectIconIndicator.style.transform = `translateX(${offsetLeft}px)`;
+    projectIconIndicator.style.opacity = '1';
+  }
+
+  function hideProjectIconIndicator() {
+    projectIconIndicator.style.opacity = '0';
+  }
+
+  projectIconLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => moveProjectIconIndicator(link));
+    link.addEventListener('focus', () => moveProjectIconIndicator(link));
+    link.addEventListener('mouseleave', hideProjectIconIndicator);
+    link.addEventListener('blur', hideProjectIconIndicator);
   });
 }
 

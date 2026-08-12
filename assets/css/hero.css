@@ -160,7 +160,7 @@ span {
   margin: 1rem;
   padding: 0.8rem 1rem;
   border: none;
-  border-radius: 999px;
+  border-radius: var(--border-radius);
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.25s ease, background-color 0.25s ease;
@@ -193,7 +193,7 @@ span {
   }
 }
 
-#icons-container {
+#hero-icons-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -218,7 +218,7 @@ span {
   pointer-events: none;
 }
 
-.icon-link {
+.hero-icon-link {
   position: relative;
   z-index: 1;
   display: inline-flex;
@@ -235,15 +235,7 @@ span {
   transition: color 0.4s ease;
 }
 
-.icon-link:first-child {
-  border-radius: 12px 0 0 12px;
-}
-
-.icon-link:last-child {
-  border-radius: 0 12px 12px 0;
-}
-
-.icon-link:hover {
+.hero-icon-link:hover {
   color: var(--primary-color);
   transform: scale(1.03);
   transition: transform .5s ease-in-out, color 0.4s ease;
