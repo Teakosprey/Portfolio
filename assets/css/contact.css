@@ -23,6 +23,7 @@
   align-items: center;
   margin-top: 20px;
   border-radius: var(--border-radius);
+  border: var(--border-color);
   box-shadow: var(--box-shadow);
 }
 

@@ -3,10 +3,11 @@
   --secondary-color: #0F1720;
   --hover-color: #2e2f2f;
   --text-color: #ffffff;
-  --text-shadow: 3px 0 #2e2f2f, 0 1px #2e2f2f, 1px 0 #2e2f2f, 0 2px #2e2f2f;
+  --text-shadow: 3px 3px 2px #000;
   --background-color: #202A34;
   --box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   --border-radius: 20px;
+  --border-color: .1px solid #449667;
 }
 
 * {
@@ -35,7 +36,6 @@ section {
   min-height: 100svh;
   padding: 0 5%;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--secondary-color);
 }
 
 .section-title {

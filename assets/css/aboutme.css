@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-color);
+  border: var(--border-color);
   box-shadow: var(--box-shadow);
   padding: 5rem;
   width: 90%;
