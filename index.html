@@ -117,22 +117,22 @@
   <section id="projects">
     <h2 class="section-title">Proyectos</h2>
     <div id="projects-icons-container">
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="html" aria-pressed="false">
         <img src="assets/icons/html.svg" alt="html" width="45" height="45">
       </a>
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="css" aria-pressed="false">
         <img src="assets/icons/css.svg" alt="css" width="45" height="45">
       </a>
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="js" aria-pressed="false">
         <img src="assets/icons/js.svg" alt="javascript" width="45" height="45">
       </a>
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="react" aria-pressed="false">
         <img src="assets/icons/react.svg" alt="react" width="45" height="45">
       </a>
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="tailwind" aria-pressed="false">
         <img src="assets/icons/tailwind.svg" alt="tailwind" width="45" height="45">
       </a>
-      <a class="projects-icon-link">
+      <a class="projects-icon-link" role="button" data-tech="typescript" aria-pressed="false">
         <img src="assets/icons/typescript.svg" alt="typescript" width="45" height="45">
       </a>
     </div>
@@ -150,8 +150,20 @@
   </section>
 
   <footer>
-    <p>© 2025 Abdiel Said Hernández Martínez</p>
+    <p>© 2026 Abdiel Said Hernández Martínez</p>
   </footer>
   <script src="assets/script.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/modals.js"></script>
+  <script src="assets/js/indicators.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof window.loadProjects === 'function') {
+        window.loadProjects();
+      }
+    });
+  </script>
 </body>
 </html>
