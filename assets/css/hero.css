@@ -9,8 +9,7 @@ span {
   aspect-ratio: 1/1;
   object-fit: contain;
   mask-image: linear-gradient(#121212 75%, transparent 100%);
-  /* Evita que el usuario pueda seleccionar la imagen (como si fuera texto) */
-  -webkit-user-select: none; /* Safari */
+  -webkit-user-select: none;
   user-select: none; 
 }
 

@@ -2,8 +2,8 @@
     background-color: var(--secondary-color);
     border: var(--border-color);
     box-shadow: var(--box-shadow);
-    padding: 5rem;
-    width: 90%;
+    padding: 1rem 4rem;
+    width: 75%;
     margin: auto;
     border-radius: var(--border-radius);
 }
@@ -12,19 +12,24 @@
     margin-bottom: 3rem;
 }
 
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
 .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    margin-right: 2rem;
-    border-bottom: .5px solid var(--primary-color);
+    width: 100%;
+    margin: 2rem 0;
     padding-bottom: 1rem;
+    border-bottom: 0.1px solid var(--primary-color);
 }
 
 .experience-title,
 .experience-subtitle {
     margin: 0;
+    padding: 0;
 }
 
 .experience-title {
@@ -35,14 +40,23 @@
 }
 
 .experience-subtitle {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: var(--border-radius);
+    padding: .1rem .5rem;
+}
+
+.experience-timelapse {
     font-size: 1.2rem;
+    font-weight: bold;
     color: var(--text-color);
     text-shadow: var(--text-shadow);
 }
 
 .experience-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-color);
     text-shadow: var(--text-shadow);
-    margin-top: 1.5rem;
+    line-height: 1.7;
 }

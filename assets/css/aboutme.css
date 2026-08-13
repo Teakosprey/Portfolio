@@ -6,7 +6,7 @@
   border: var(--border-color);
   box-shadow: var(--box-shadow);
   padding: 5rem;
-  width: 90%;
+  width: 75%;
   margin: auto;
   border-radius: var(--border-radius);
 }
@@ -16,7 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  mask-image: linear-gradient(var(--secondary-color) 90%, transparent 100%);
   width: 35%;
+  min-width: 300px;
   margin-right: 2rem;
 }
 
