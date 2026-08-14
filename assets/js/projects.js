@@ -3,11 +3,18 @@ window.activeProjectTech = null;
 
 window.renderProjects = function(projects) {
   const container = document.getElementById("project-list");
+  if (!container) return;
+
+  container.classList.remove("single-project");
   container.innerHTML = "";
 
   if (!projects || !projects.length) {
     container.innerHTML = '<p class="no-projects">No hay proyectos para esta tecnología.</p>';
     return;
+  }
+
+  if (projects.length === 1) {
+    container.classList.add("single-project");
   }
 
   projects.forEach(p => {
