@@ -1,11 +1,15 @@
 .experience-content {
     background-color: var(--secondary-color);
-    border: var(--border-color);
     box-shadow: var(--box-shadow);
-    padding: 1rem 4rem;
-    width: 75%;
+    padding: 2rem 4rem;
+    width: 70%;
     margin: auto;
     border-radius: var(--border-radius);
+    transition: transform .3s ease-in-out;
+}
+
+.experience-content:hover {
+    transform: scale(1.03);
 }
 
 .experience-item {
@@ -33,7 +37,7 @@
 }
 
 .experience-title {
-    font-size: 1.3rem;
+    font-size: 1.2em;
     font-weight: bold;
     color: var(--text-color);
     text-shadow: var(--text-shadow);
@@ -59,4 +63,5 @@
     color: var(--text-color);
     text-shadow: var(--text-shadow);
     line-height: 1.7;
+    margin: 1rem 0;
 }

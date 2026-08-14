@@ -3,14 +3,17 @@
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-color);
-  border: var(--border-color);
   box-shadow: var(--box-shadow);
   padding: 5rem;
-  width: 75%;
+  width: 70%;
   margin: auto;
   border-radius: var(--border-radius);
+  transition: transform 0.3s ease-in-out;
 }
 
+.about-content:hover {
+  transform: scale(1.03);
+}
 .about-image {
   flex: 1;
   display: flex;

@@ -11,7 +11,6 @@
   justify-content: space-between;
   box-sizing: border-box;
   width: 60%;
-  border: .1px solid var(--primary-color) ;
   box-shadow: var(--box-shadow);
   background: var(--secondary-color);
   margin: 0 auto 4rem;
@@ -30,7 +29,7 @@
   object-fit: contain;
   margin: 0;
   padding: 1.5rem 0;
-  transition: background-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+  transition: background-color 0.2s ease-out, transform 0.3s ease-in-out, opacity 0.25s ease;
   -webkit-user-select: none; /* Safari */
   user-select: none; 
   cursor: pointer;
@@ -38,7 +37,7 @@
 
 .projects-icon-link:hover {
   background-color: var(--hover-color);
-  transform: scale(1.03);
+  transform: scale(1.2);
 }
 
 .projects-icon-link.active {
@@ -48,18 +47,22 @@
 #project-list {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 2rem;
+  grid-auto-flow: auto;
+
+  gap: 1.5rem;
 }
 
 .project-card {
   width: 100%;
-  max-width: 950px;
   background: var(--secondary-color);
   padding: 3rem;
   border-radius: var(--border-radius);
-  border: var(--border-color);
   box-shadow: var(--box-shadow);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
 }
 
 .card-container {
@@ -104,11 +107,11 @@
   text-decoration: none;
   margin: 0 .5rem;
   padding: .5rem 1rem;
-  transition: transform .5s ease-out;
+  transition: transform .3s ease-in-out;
 }
 
 .card-link span {
-  font-size: 1rem;
+  font-size: .8em;
   font-weight: bold;
   color: var(--text-color);
 }

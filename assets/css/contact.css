@@ -23,8 +23,12 @@
   align-items: center;
   margin-top: 20px;
   border-radius: var(--border-radius);
-  border: var(--border-color);
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease-in-out;
+}
+
+#contact-form:hover {
+  transform: scale(1.03);
 }
 
 .form-control {
