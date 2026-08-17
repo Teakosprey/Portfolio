@@ -2,7 +2,7 @@
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
     padding: 2rem 4rem;
-    width: 70%;
+    width: 60%;
     margin: auto;
     border-radius: var(--border-radius);
     transition: transform .3s ease-in-out;
@@ -59,7 +59,7 @@
 }
 
 .about-description {
-    font-size: 1rem;
+    font-size: 1.09rem;
     color: var(--text-color);
     text-shadow: var(--text-shadow);
     line-height: 1.7;

@@ -6,7 +6,7 @@
   --text-shadow: 3px 3px 2px #000;
   --background-color: #202A34;
   --box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-  --border-radius: 20px;
+  --border-radius: 50px;
 }
 
 @keyframes fadeinout {
@@ -35,7 +35,7 @@
 @keyframes fadeinoutSmall {
   0% {
     opacity: 0;
-    transform: translateY(30px) scale(0.9);
+    transform: translateY(30px) scale(0.7);
   }
   20% {
     opacity: 1;
@@ -51,7 +51,19 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(-24px) scale(0.992);
+    transform: translateY(-24px) scale(0.7);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 
@@ -80,22 +92,15 @@ section {
   box-sizing: border-box;
 }
 
-#hero,
-#hero-about,
-#profile-img,
-#hero-icons-container,
-.hero-btn,
-.about-content,
-.experience-content,
-.project-card,
-#contact-form {
+#hero, #hero-about, #profile-img, #hero-icons-container, #contact-form,
+.about-content, .hero-btn {
   animation: fadeinout .5s linear both;
   animation-timeline: view();
   animation-range: entry 20% cover 95%;
 }
 
-.section-title, #hero-aboutme
-#projects-icons-container {
+#projects-icons-container, #hero-aboutme, 
+.section-title, .project-card {
   animation: fadeinoutSmall .7s ease-out both;
   animation-timeline: view();
   animation-range: entry 15% cover 95%;
