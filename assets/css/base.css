@@ -35,11 +35,11 @@
 @keyframes fadeinoutSmall {
   0% {
     opacity: 0;
-    transform: translateY(30px) scale(0.98);
+    transform: translateY(30px) scale(0.9);
   }
   20% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(.9);
   }
   70% {
     opacity: 1;
@@ -77,10 +77,14 @@ section {
   scroll-margin-top: 30px;
   width: 100%;
   margin-bottom: 5ch;
-  padding: 0 5%;
   box-sizing: border-box;
 }
 
+#hero,
+#hero-about,
+#profile-img,
+#hero-icons-container,
+.hero-btn,
 .about-content,
 .experience-content,
 .project-card,
@@ -90,7 +94,7 @@ section {
   animation-range: entry 20% cover 95%;
 }
 
-.section-title,
+.section-title, #hero-aboutme
 #projects-icons-container {
   animation: fadeinoutSmall .7s ease-out both;
   animation-timeline: view();

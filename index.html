@@ -15,7 +15,6 @@
     <nav>
       <a href="#start">Inicio</a>
       <a href="#about">Sobre mí</a>
-      <a href="#experience">Experiencia</a>
       <a href="#projects">Proyectos</a>
       <a href="#contact">Contacto</a>
     </nav>
@@ -23,23 +22,30 @@
   
   <section id="hero">
     <img src="assets/images/profile.webp" alt="Foto de perfil" draggable="false" id="profile-img" >
-    <h1>Hola, Soy Abdiel</h1>
-    <h2>Ingeniero en Sistemas Computacionales</h2>
-    <div id="hero-icons-container">
-      <a class="hero-icon-link email-link" href="#" role="button" aria-haspopup="dialog" aria-controls="email-modal" data-email="said200317@gmail.com">
-        <img src="assets/icons/email.svg" alt="Email" width="35" height="35">
-      </a>
-      <a class="hero-icon-link" href="https://github.com/Teakosprey" target="_blank">
-        <img src="assets/icons/github.svg" alt="GitHub" width="35" height="35">
-      </a>
-      <a class="hero-icon-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank">
-        <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="35" height="35">
-      </a>
+    <div id="hero-about">
+      <h1>Hola, Soy Abdiel</h1>
+      <h2>Ingeniero en Sistemas Computacionales</h2>
+      <p id="hero-aboutme">
+        Mi nombre es <i>Abdiel Said Hernández Martínez</i>, y soy <i>Desarrollador Web Frontend.</i><br>
+        Mi meta profesional es convertirme en <i>Desarrollador Full Stack</i>, por lo que me mantengo en 
+        constante aprendizaje de nuevas tecnologías y metodologías ya sean Frontend o Backend.
+      </p>
+      <div id="hero-icons-container">
+        <a class="hero-icon-link email-link" href="#" role="button" aria-haspopup="dialog" aria-controls="email-modal" data-email="said200317@gmail.com">
+          <img src="assets/icons/email.svg" alt="Email" width="35" height="35">
+        </a>
+        <a class="hero-icon-link" href="https://github.com/Teakosprey" target="_blank">
+          <img src="assets/icons/github.svg" alt="GitHub" width="35" height="35">
+        </a>
+        <a class="hero-icon-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="35" height="35">
+        </a>
+      </div>
+      <button class="hero-btn cv-trigger" type="button" aria-haspopup="dialog" aria-controls="cv-modal">
+        <img src="assets/icons/cv.svg" alt="CV" width="35" height="35">
+        <span>Descargar CV</span>
+      </button>
     </div>
-    <button class="hero-btn cv-trigger" type="button" aria-haspopup="dialog" aria-controls="cv-modal">
-      <img src="assets/icons/cv.svg" alt="CV" width="35" height="35">
-      <span>Descargar CV</span>
-    </button>
   </section>
 
   <div id="email-modal" class="email-modal" role="dialog" aria-modal="true" aria-labelledby="email-modal-title" aria-describedby="email-modal-description">
@@ -83,47 +89,32 @@
   </div>
 
   <section id="about">
-      <h2 class="section-title">Sobre mí</h2>
-      <div class="about-content">
-        <div class="about-image">
-          <img src="assets/images/profile.webp" alt="Foto de perfil" draggable="false" id ="img-about">
-        </div>
-      <div class="about-text">
-        <p>Mi nombre es Abdiel Said Hernández Martínez, soy una persona que disfruta de resolver problemas y crear soluciones innovadoras.<br><br>
-          Me especializo en el Desarrollo Web Frontend, con el objetivo de llegar a ser Desarrollador Full Stack, por lo que me mantengo en 
-          constante aprendizaje de nuevas tecnologías y metodologías ya sea Frontend o Backend.
-        </p><br>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
     <h2 class="section-title">Experiencia</h2>
-    <div class="experience-content">
-      <div class="experience-item">
-        <div class="experience-header">
-          <span class="experience-title">Desarrollador Web Frontend</span>
-          <div class="experience-subtitle">
-            <img class="experience-company" src="assets/images/no2s.webp" alt="company" width="100" height="40">
-            <span class ="experience-timelapse">2024 - 2026</span>
+    <div class="about-content">
+      <div class="about-item">
+        <div class="about-header">
+          <span class="about-title">Desarrollador Web Frontend</span>
+          <div class="about-subtitle">
+            <img class="about-company" src="assets/images/no2s.webp" alt="company" width="100" height="40">
+            <span class ="about-timelapse">2024 - 2026</span>
           </div>
         </div>
-        <p class="experience-description">Durante mi experiencia en No2s, participé en el desarrollo 
+        <p class="about-description">Durante mi experiencia en No2s, participé en el desarrollo 
         de plataformas web utilizando React, contribuyendo al desarrollo de nuevas 
         funcionalidades y a la mejora continua de la interfaz de usuario. <br><br>Asimismo, administré y mantuve sitios web en WordPress, 
         asegurando su correcto funcionamiento. Como parte de mis responsabilidades, desarrollé una 
         landing page responsive utilizando HTML, CSS y JavaScript, poniendo énfasis en el rendimiento y la accesibilidad.
       </p>
       </div>
-      <div class="experience-item">
-        <div class="experience-header">
-          <span class="experience-title">Auxiliar de TI</span>
-          <div class="experience-subtitle">
-            <img class="experience-company" src="assets/images/uo.webp" alt="company" width="100" height="40">
-            <span class ="experience-timelapse">2024 - 2026</span>
+      <div class="about-item">
+        <div class="about-header">
+          <span class="about-title">Auxiliar de TI</span>
+          <div class="about-subtitle">
+            <img class="about-company" src="assets/images/uo.webp" alt="company" width="100" height="40">
+            <span class ="about-timelapse">2024 - 2026</span>
           </div>
         </div>
-        <p class="experience-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque enim veniam a, impedit autem, 
+        <p class="about-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque enim veniam a, impedit autem, 
           dignissimos voluptatem animi aliquid exercitationem, repellat nulla mollitia cum doloribus. Fugit quas ab id velit aspernatur.</p>
       </div>
     </div>
