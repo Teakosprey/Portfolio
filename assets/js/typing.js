@@ -14,9 +14,9 @@
   let borrando = false;
   let pausado = false;
 
-  const velocidadEscritura = 100; // ms por carácter
-  const velocidadBorrado = 100; // ms por carácter
-  const pausaAlFinal = 3500; // ms de pausa al terminar de escribir
+  const velocidadEscritura = 70; // ms por carácter
+  const velocidadBorrado = 30; // ms por carácter
+  const pausaAlFinal = 2000; // ms de pausa al terminar de escribir
   const pausaAlComenzar = 500; // ms de pausa antes de borrar
 
   function escribir() {
