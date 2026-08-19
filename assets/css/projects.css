@@ -12,7 +12,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   width: 70%;
-  max-width: 900px;
+  max-width: 1200px;
   box-shadow: var(--box-shadow);
   background: var(--secondary-color);
   margin: 0 auto 4rem;

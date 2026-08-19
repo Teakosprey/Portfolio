@@ -41,12 +41,12 @@ span {
 }
 
 #hero h1 {
-  font-size: clamp(1.4rem, 3vw, 3rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   text-align: left;
   font-weight: bold;
   text-shadow: var(--text-shadow);
   color: var(--primary-color);
-  line-height: 1.2;
+  line-height: 1.6;
   margin-top: 0.5rem;
 }
 
