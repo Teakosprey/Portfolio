@@ -93,6 +93,40 @@
 }
 
 @media (max-width: 820px) {
+  /* Collapse the navigation into a CSS-only dropdown on small screens. */
+  nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  nav::before {
+    content: "☰ Menú";
+    display: block;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  nav:hover a,
+  nav:focus-within a {
+    display: block;
+    padding: 0.7rem 1rem;
+    background: var(--background-color, #fff);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  nav:hover,
+  nav:focus-within {
+    z-index: 10;
+  }
+
   #hero {
     flex-direction: column;
     gap: clamp(1rem, 5vw, 1.5rem);
