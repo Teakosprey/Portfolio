@@ -16,7 +16,8 @@
 #contact-form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
+  min-width: 950px;
   margin: 40px auto;
   padding: 20px;
   background-color: var(--secondary-color);
@@ -24,6 +25,7 @@
   margin-top: 20px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  gap: 2rem;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -36,7 +38,6 @@
   padding: 20px;
   margin-top: 50px;
   border: 1px solid #444;
-  border-radius: var(--border-radius);
   background-color: var(--secondary-color);
   color: var(--text-color);
 }
@@ -57,7 +58,7 @@
 
 #send {
   width: 80%;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 20px;
   padding: 15px 0;
   background-color: var(--primary-color);
@@ -65,7 +66,7 @@
   font-weight: bold;
   color: var(--text-color);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
 }
 
