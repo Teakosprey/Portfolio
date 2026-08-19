@@ -2,7 +2,7 @@
   {
     "name": "Example Project",
     "image": "/assets/images/example.webp",
-    "description": "Plataforma de juegos en línea que permite a los usuarios jugar y crear juegos multijugador en tiempo real. Incluye características como chat en vivo, tablas de clasificación y personalización de avatares.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus consectetur error eius incidunt et asperiores, illo voluptatem nisi sunt tempore iure veritatis. Ad enim eos, labore quibusdam nisi natus perferendis!",
     "technologies": ["react", "tailwind", "typescript"],
     "link_github": "https://github.com/Teakosprey/Unbreakable-Games",
     "link_web": "https://github.com/Teakosprey/Unbreakable-Games"
@@ -10,7 +10,7 @@
   {
     "name": "Example Project",
     "image": "/assets/images/example.webp",
-    "description": "Plataforma de juegos en línea que permite a los usuarios jugar y crear juegos multijugador en tiempo real. Incluye características como chat en vivo, tablas de clasificación y personalización de avatares.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus consectetur error eius incidunt et asperiores, illo voluptatem nisi sunt tempore iure veritatis. Ad enim eos, labore quibusdam nisi natus perferendis!",
     "technologies": ["html", "css", "js"],
     "link_github": "https://github.com/Teakosprey/Unbreakable-Games",
     "link_web": "https://github.com/Teakosprey/Unbreakable-Games"
