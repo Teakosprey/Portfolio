@@ -38,7 +38,7 @@
 
 .projects-icon-link:hover {
   background-color: var(--hover-color);
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .projects-icon-link.active {
@@ -79,11 +79,12 @@
   transform: scale(1.03);
 }
 
-.card-container {
+.card-icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem ;
+  padding: 1.5rem 0;
+  gap: 2rem;
 }
 
 .card-title {
@@ -110,9 +111,8 @@
 }
 
 .card-icon {
-  width: 4rem;
+  width: 2.5rem;
   height: auto;
-  padding: .5rem;
   margin: .5rem;
 }
 

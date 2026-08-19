@@ -52,15 +52,14 @@ span {
 
 #hero h2 {
   display: block;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-size: clamp(1.5rem, 2.2vw, 1.8rem);
   text-align: left;
   font-weight: bold;
   white-space: nowrap;
   text-shadow: var(--text-shadow);
   color: var(--text-color);
   line-height: 1.2;
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
   padding: 0;
   border-right: 3px solid;
   height: 2.2rem;

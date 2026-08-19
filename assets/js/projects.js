@@ -38,7 +38,7 @@ window.renderProjects = function(projects) {
       <h3 class="card-title">${p.name}</h3>
       <img src="${p.image}" alt="${p.name}" class="card-image">
       <p class="card-description">${p.description}</p>
-      <div class="card-container">
+      <div class="card-icon-container">
         ${techIcons}
       </div>
       <div class="card-link-container">
