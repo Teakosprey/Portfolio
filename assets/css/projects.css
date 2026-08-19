@@ -52,7 +52,7 @@
   grid-auto-flow: auto;
   width: 80%;
   gap: 1.5rem;
-  justify-items: stretch;
+  justify-items: center;
 }
 
 #project-list.single-project {
@@ -68,6 +68,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 750px;
   background: var(--secondary-color);
   padding: 3rem;
   border-radius: var(--border-radius);
@@ -96,14 +97,16 @@
 
 .card-image {
   width: 100%; 
+  max-width: 650px;
   height: auto; 
   border-radius: var(--border-radius);
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
 
 .card-description {
   font-size: 1.1rem;
   color: var(--text-color);
+  line-height: 1.6;
   text-shadow: var(--text-shadow);
 }
 
@@ -114,14 +117,21 @@
   margin: .5rem;
 }
 
+.card-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .card-link {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: var(--border-radius);
   text-decoration: none;
-  margin: 0 .5rem;
-  padding: .5rem 1rem;
+  margin: 0;
+  padding: .7rem;
   transition: transform .3s ease-in-out;
 }
 

@@ -1,6 +1,16 @@
 window.projectsData = [];
 window.activeProjectTech = null;
 
+function updateProjectsColumns() {
+  const container = document.getElementById("project-list");
+  if (!container) return;
+
+  container.style.gridTemplateColumns =
+    window.innerWidth < 1200 ? "1fr" : "";
+}
+
+window.addEventListener("resize", updateProjectsColumns);
+
 window.renderProjects = function(projects) {
   const container = document.getElementById("project-list");
   if (!container) return;
@@ -31,19 +41,21 @@ window.renderProjects = function(projects) {
       <div class="card-container">
         ${techIcons}
       </div>
-      <div class="card-container">
+      <div class="card-link-container">
         <a href="${p.link_github}" class="card-link" target="_blank">
-          <img src="assets/icons/github.svg" alt="github" width="30" height="30">
+          <img src="assets/icons/github.svg" alt="github" width="25" height="25">
           <span>Ir al repositorio</span>
         </a>
         <a href="${p.link_web}" class="card-link" target="_blank">
-          <img src="assets/icons/web.svg" alt="web" width="30" height="30">
+          <img src="assets/icons/web.svg" alt="web" width="25" height="25">
           <span>Ir a la web</span>
         </a>
       </div>
     `;
     container.appendChild(card);
   });
+
+  updateProjectsColumns();
 };
 
 window.loadProjects = async function() {
