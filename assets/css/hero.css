@@ -11,7 +11,7 @@ span {
   user-select: none;
   transition: transform 0.3s ease-in-out;
   margin-top: -5rem;
-  box-shadow: .5px .5px 25px var(--primary-color);
+  box-shadow: .5px .5px 10px var(--primary-color);
   border-radius: 100%;
 }
 
