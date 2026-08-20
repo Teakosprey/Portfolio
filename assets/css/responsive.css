@@ -122,7 +122,6 @@
     white-space: nowrap;
   }
 
-  nav:hover,
   nav:focus-within {
     z-index: 10;
   }
