@@ -21,6 +21,14 @@ nav {
   align-items: center;
 }
 
+.nav-menu-toggle {
+  display: none;
+}
+
+#nav-links {
+  display: contents;
+}
+
 .nav-indicator {
   position: absolute;
   top: 50%;

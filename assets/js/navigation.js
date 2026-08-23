@@ -2,8 +2,31 @@
   const secciones = document.querySelectorAll("section");
   const nav = document.querySelector("nav");
   const navLinks = [...document.querySelectorAll("nav a")];
+  const menuToggle = nav?.querySelector(".nav-menu-toggle");
 
   if (!nav || !navLinks.length) return;
+
+  function closeMenu() {
+    nav.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target)) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
 
   const indicator = document.createElement("span");
   indicator.classList.add("nav-indicator");

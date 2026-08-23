@@ -93,7 +93,6 @@
 }
 
 @media (max-width: 820px) {
-  /* Collapse the navigation into a CSS-only dropdown on small screens. */
   nav {
     position: relative;
     display: block;
@@ -102,19 +101,26 @@
     text-align: center;
   }
 
-  nav::before {
-    content: "☰ Menú";
+  .nav-menu-toggle {
     display: block;
+    width: 100%;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    background: transparent;
     padding: 0.6rem 0.8rem;
     cursor: pointer;
+  }
+
+  #nav-links {
+    display: block;
   }
 
   nav a {
     display: none;
   }
 
-  nav:hover a,
-  nav:focus-within a {
+  nav.is-open a {
     display: block;
     padding: 0.7rem 1rem;
     background: var(--background-color, #fff);
@@ -122,7 +128,7 @@
     white-space: nowrap;
   }
 
-  nav:focus-within {
+  nav.is-open {
     z-index: 10;
   }
 
