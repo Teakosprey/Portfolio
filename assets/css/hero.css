@@ -6,13 +6,11 @@ span {
 
 #profile-img {
   width: 30%;
-  background-color: var(--primary-color);
   -webkit-user-select: none;
   user-select: none;
   transition: transform 0.3s ease-in-out;
   margin-top: -5rem;
-  box-shadow: .5px .5px 10px var(--primary-color);
-  border-radius: 100%;
+  mask-image: linear-gradient(var(--background-color), 90%, transparent);
 }
 
 #profile-img:hover {
