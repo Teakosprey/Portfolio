@@ -8,13 +8,8 @@ span {
   width: 30%;
   -webkit-user-select: none;
   user-select: none;
-  transition: transform 0.3s ease-in-out;
   margin-top: -5rem;
   mask-image: linear-gradient(var(--background-color), 90%, transparent);
-}
-
-#profile-img:hover {
-  transform: scale(1.05);
 }
 
 #hero {
@@ -57,10 +52,10 @@ span {
   text-shadow: var(--text-shadow);
   color: var(--text-color);
   line-height: 1.2;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   padding: 0;
   border-right: 3px solid;
-  height: 2.2rem;
+  height: 2rem;
   animation: blink .5s infinite step-end alternate;
   overflow: hidden;
 }
