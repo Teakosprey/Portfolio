@@ -36,7 +36,7 @@ window.renderProjects = function(projects) {
     card.className = "project-card";
     card.innerHTML = `
       <h3 class="card-title">${p.name}</h3>
-      <img src="${p.image}" alt="${p.name}" class="card-image">
+      <video src="${p.video}" alt="${p.name}" autoplay muted loop playsinline class="card-video"></video>
       <p class="card-description">${p.description}</p>
       <div class="card-icon-container">
         ${techIcons}
