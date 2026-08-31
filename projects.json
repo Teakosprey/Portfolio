@@ -2,7 +2,7 @@
   {
     "name": "Clon de Tetris",
     "video": "/assets/records/tetris.mp4",
-    "description": "Recreación del videojuego Tetris, desarrollado en <b>Python</b> utilizando <b>Pygame</b> para la interfaz y la lógica, y <b>Pygbag</b> para conseguir desplegarlo en la web.",
+    "description": "Recreación del videojuego <b>Tetris</b>. Desarrollado en <b>Python</b>, utilizando <b>Pygame</b> para la interfaz y la lógica, y <b>Pygbag</b> con <b>WebAssembly</b> para conseguir desplegarlo en la web.",
     "technologies": ["html", "python"],
     "link_github": "https://github.com/Teakosprey/Tetris_clon",
     "link_web": "https://tetris-cloned.netlify.app/"

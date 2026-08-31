@@ -104,7 +104,9 @@
 }
 
 .card-description {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: auto;
   color: var(--text-color);
   line-height: 1.6;
   text-shadow: var(--text-shadow);
