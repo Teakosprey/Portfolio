@@ -92,14 +92,13 @@ section {
   box-sizing: border-box;
 }
 
-#hero, #hero-about, #profile-img, #hero-icons-container, #contact-form,
-.about-content, .hero-btn {
+#contact-form, .about-content {
   animation: fadeinout .5s linear both;
   animation-timeline: view();
   animation-range: entry 20% cover 95%;
 }
 
-#projects-icons-container, #hero-aboutme, 
+#projects-icons-container,
 .section-title, .project-card {
   animation: fadeinoutSmall .7s ease-out both;
   animation-timeline: view();
