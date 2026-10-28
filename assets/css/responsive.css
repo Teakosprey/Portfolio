@@ -289,3 +289,23 @@
     padding: 1.25rem;
   }
 }
+
+@media (max-width: 767px) {
+  .contact-panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .contact-info {
+    padding: .25rem;
+  }
+
+  .contact-method {
+    padding: .75rem;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
