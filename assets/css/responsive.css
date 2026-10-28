@@ -31,8 +31,8 @@
   }
 
   .section-title {
-    margin: 0;
-    padding: clamp(1.5rem, 5vw, 3rem) var(--page-padding);
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 3rem) 0;
     font-size: clamp(1.5rem, 3.5vw, 2rem);
   }
 
@@ -52,6 +52,7 @@
   .about-content,
   #project-list {
     width: min(calc(100% - 2 * var(--page-padding)), 60rem);
+    margin-inline: auto;
   }
 
   .about-content {
@@ -190,6 +191,34 @@
     justify-content: space-between;
   }
 
+  .about-content {
+    padding-left: 2rem;
+  }
+
+  .about-content::before {
+    left: .5rem;
+    transform: none;
+  }
+
+  .about-entry,
+  .about-entry:nth-child(odd),
+  .about-entry:nth-child(even) {
+    align-self: flex-end;
+    width: 100%;
+  }
+
+  .about-entry::before,
+  .about-entry:nth-child(odd)::before,
+  .about-entry:nth-child(even)::before {
+    left: -1.875rem;
+    right: auto;
+  }
+
+  .about-entry:nth-child(odd) .about-item-title {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
   #projects-icons-container {
     width: min(calc(100% - 2 * var(--page-padding)), 35rem);
     margin-bottom: clamp(2rem, 7vw, 4rem);
@@ -240,6 +269,7 @@
   #project-list,
   #projects-icons-container {
     width: calc(100% - 2 * var(--page-padding));
+    margin-inline: auto;
   }
 
   .about-content {

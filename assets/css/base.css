@@ -99,18 +99,29 @@ section {
 }
 
 #projects-icons-container,
-.section-title, .project-card {
+.section-title, .section-subtitle, .project-card {
   animation: fadeinoutSmall .7s ease-out both;
   animation-timeline: view();
   animation-range: entry 15% cover 95%;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-shadow: var(--text-shadow);
     color: var(--text-color);
-    margin: 0 3rem;
-    padding: 3rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: .5rem 0;
+    border-bottom: 2px solid var(--primary-color);
     text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #d4d4d4;
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin-bottom: 3rem;
 }
