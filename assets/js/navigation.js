@@ -1,7 +1,7 @@
 (() => {
   const secciones = document.querySelectorAll("section");
-  const nav = document.querySelector("nav");
-  const navLinks = [...document.querySelectorAll("nav a")];
+  const nav = document.querySelector("header nav");
+  const navLinks = [...(nav?.querySelectorAll("a") ?? [])];
   const menuToggle = nav?.querySelector(".nav-menu-toggle");
 
   if (!nav || !navLinks.length) return;
@@ -68,7 +68,7 @@
           enlace.classList.remove("active");
         });
 
-        const enlaceActivo = document.querySelector(`nav a[href="#${id}"]`);
+        const enlaceActivo = nav.querySelector(`a[href="#${id}"]`);
         if (enlaceActivo) {
           enlaceActivo.classList.add("active");
         }

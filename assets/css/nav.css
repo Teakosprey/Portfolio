@@ -13,7 +13,7 @@ header {
   z-index: 1000;
 }
 
-nav {
+header nav {
   position: relative;
   min-height: 90px;
   display: flex;
@@ -42,7 +42,7 @@ nav {
   pointer-events: none;
 }
 
-nav a {
+header nav a {
   position: relative;
   z-index: 1;
   justify-content: center;
@@ -55,14 +55,13 @@ nav a {
   transition: color 0.4s ease;
 }
 
-nav a:hover {
+header nav a:hover {
   color: var(--primary-color);
   transform: scaleX(1);
   transform-origin: center;
 }
 
-nav a.active {
+header nav a.active {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
-

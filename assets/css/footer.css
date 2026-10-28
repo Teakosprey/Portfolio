@@ -27,24 +27,26 @@ footer {
 .footer-social {
   display: flex;
   align-items: center;
-  gap: .7rem;
+  gap: 3rem;
 }
 
-.footer-social a {
+.footer-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: 0;
+  box-shadow: none;
   transition: transform .2s ease;
 }
 
-.footer-social a:hover,
-.footer-social a:focus-visible {
+.footer-link:hover {
   transform: scale(1.15);
 }
 
 .footer-social img {
   display: block;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
 }
