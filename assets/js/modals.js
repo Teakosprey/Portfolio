@@ -2,59 +2,62 @@
   const emailLink = document.querySelector('.hero-icon-link.email-link');
   const emailModal = document.getElementById('email-modal');
   const emailCopyButton = document.querySelector('.email-modal__copy');
-  const emailOpenButton = document.querySelector('.email-modal__open');
   const emailStatus = document.querySelector('.email-modal__status');
   const cvTrigger = document.querySelector('.cv-trigger');
   const cvModal = document.getElementById('cv-modal');
+  let activeModal = null;
+  let modalTrigger = null;
+  let previousBodyOverflow = '';
 
-  function openEmailModal() {
-    if (!emailModal) return;
-    emailModal.classList.add('is-open');
+  function openModal(modal, trigger) {
+    if (!modal) return;
+    if (activeModal) closeModal(activeModal, false);
+
+    activeModal = modal;
+    modalTrigger = trigger;
+    modal.inert = false;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('is-open');
+    previousBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    modal.querySelector('.email-modal__close')?.focus();
   }
 
-  function closeEmailModal() {
-    if (!emailModal) return;
-    emailModal.classList.remove('is-open');
-    document.body.style.overflow = '';
-    if (emailStatus) {
-      emailStatus.textContent = '';
+  function closeModal(modal, restoreFocus = true) {
+    if (!modal || !modal.classList.contains('is-open')) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.inert = true;
+    document.body.style.overflow = previousBodyOverflow;
+
+    if (activeModal === modal) {
+      activeModal = null;
+      if (restoreFocus && modalTrigger instanceof HTMLElement) {
+        modalTrigger.focus();
+      }
+      modalTrigger = null;
     }
-    if (emailCopyButton) {
-      emailCopyButton.classList.remove('is-copied');
-      emailCopyButton.textContent = 'Copiar correo';
+
+    if (modal === emailModal) {
+      if (emailStatus) {
+        emailStatus.textContent = '';
+      }
+      if (emailCopyButton) {
+        emailCopyButton.classList.remove('is-copied');
+        emailCopyButton.textContent = 'Copiar correo';
+      }
     }
-  }
-
-  function openCvModal() {
-    if (!cvModal) return;
-    cvModal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCvModal() {
-    if (!cvModal) return;
-    cvModal.classList.remove('is-open');
-    document.body.style.overflow = '';
   }
 
   if (emailLink) {
-    emailLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      openEmailModal();
-    });
-
-    emailLink.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        openEmailModal();
-      }
+    emailLink.addEventListener('click', () => {
+      openModal(emailModal, emailLink);
     });
   }
 
   if (cvTrigger) {
     cvTrigger.addEventListener('click', () => {
-      openCvModal();
+      openModal(cvModal, cvTrigger);
     });
   }
 
@@ -89,31 +92,32 @@
 
   document.querySelectorAll('[data-close-modal]').forEach((button) => {
     button.addEventListener('click', () => {
-      closeEmailModal();
-      closeCvModal();
+      closeModal(button.closest('.email-modal'));
     });
   });
 
-  if (emailModal) {
-    emailModal.addEventListener('click', (event) => {
-      if (event.target === emailModal) {
-        closeEmailModal();
-      }
-    });
-  }
-
-  if (cvModal) {
-    cvModal.addEventListener('click', (event) => {
-      if (event.target === cvModal) {
-        closeCvModal();
-      }
-    });
-  }
-
   document.addEventListener('keydown', (event) => {
+    if (!activeModal) return;
+
     if (event.key === 'Escape') {
-      closeEmailModal();
-      closeCvModal();
+      closeModal(activeModal);
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      const focusable = [...activeModal.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
     }
   });
 })();

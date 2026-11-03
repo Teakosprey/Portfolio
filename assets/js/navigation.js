@@ -31,8 +31,18 @@
   const indicator = document.createElement("span");
   indicator.classList.add("nav-indicator");
   nav.appendChild(indicator);
+  let indicatorLink = null;
 
   function showIndicator(link) {
+    if (
+      window.matchMedia("(max-width: 820px)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      hideIndicator();
+      return;
+    }
+
+    indicatorLink = link;
     const navRect = nav.getBoundingClientRect();
     const linkRect = link.getBoundingClientRect();
     const offsetLeft = linkRect.left - navRect.left;
@@ -43,8 +53,21 @@
   }
 
   function hideIndicator() {
+    indicatorLink = null;
     indicator.style.opacity = "0";
   }
+
+  window.addEventListener("resize", () => {
+    if (!window.matchMedia("(max-width: 820px)").matches) {
+      closeMenu();
+    }
+
+    if (indicatorLink) {
+      showIndicator(indicatorLink);
+    } else {
+      hideIndicator();
+    }
+  });
 
   navLinks.forEach((link) => {
     link.addEventListener("mouseenter", () => showIndicator(link));

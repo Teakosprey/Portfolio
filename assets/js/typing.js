@@ -1,6 +1,6 @@
 (() => {
   const h2 = document.querySelector("#hero h2");
-  if (!h2) return;
+  if (!h2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   // Textos a mostrar en el efecto de typing
   const textos = [

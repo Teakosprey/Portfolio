@@ -11,8 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body id="start">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <header>
-    <nav>
+    <nav aria-label="Navegación principal">
       <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
         ☰ Menú
       </button>
@@ -24,85 +25,46 @@
       </div>
     </nav>
   </header>
-  
-  <section id="hero">
-    <img src="assets/images/profile.webp" alt="Foto de perfil" draggable="false" id="profile-img" >
+
+  <main id="main-content" tabindex="-1">
+  <section id="hero" aria-labelledby="hero-title">
+    <img src="assets/images/profile.webp" alt="Abdiel Hernández" draggable="false" id="profile-img">
     <div id="hero-about">
-      <h1>Hola, Soy Abdiel</h1>
-      <h2>Ingeniero en Sistemas Computacionales</h2>
+      <h1 id="hero-title">Hola, Soy Abdiel</h1>
+      <h2 aria-live="off">Ingeniero en Sistemas Computacionales</h2>
       <p id="hero-aboutme">
         Mi nombre es <i>Abdiel Said Hernández Martínez</i>, y soy <i>Desarrollador Frontend.</i><br>
         Mi meta profesional es convertirme en <i>Desarrollador Full Stack</i>, por lo que me mantengo en 
         constante aprendizaje de nuevas tecnologías y metodologías.
       </p>
       <div id="hero-icons-container">
-        <a class="hero-icon-link email-link" href="#" role="button" aria-haspopup="dialog" aria-controls="email-modal" data-email="said200317@gmail.com">
-          <img src="assets/icons/email.svg" alt="Email" width="35" height="35">
+        <button class="hero-icon-link email-link" type="button" aria-label="Abrir opciones de correo electrónico" aria-haspopup="dialog" aria-controls="email-modal" data-email="said200317@gmail.com">
+          <img src="assets/icons/email.svg" alt="" aria-hidden="true" width="35" height="35">
+        </button>
+        <a class="hero-icon-link" href="https://github.com/Teakosprey" target="_blank" rel="noopener noreferrer" aria-label="GitHub, abre en una pestaña nueva">
+          <img src="assets/icons/github_hero.svg" alt="" aria-hidden="true" width="35" height="35">
         </a>
-        <a class="hero-icon-link" href="https://github.com/Teakosprey" target="_blank">
-          <img src="assets/icons/github_hero.svg" alt="GitHub" width="35" height="35">
-        </a>
-        <a class="hero-icon-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank">
-          <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="35" height="35">
+        <a class="hero-icon-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, abre en una pestaña nueva">
+          <img src="assets/icons/linkedin.svg" alt="" aria-hidden="true" width="35" height="35">
         </a>
       </div>
       <button class="hero-btn cv-trigger" type="button" aria-haspopup="dialog" aria-controls="cv-modal">
-        <img src="assets/icons/cv.svg" alt="CV" width="35" height="35">
+        <img src="assets/icons/cv.svg" alt="" aria-hidden="true" width="35" height="35">
         <span>Descargar CV</span>
       </button>
     </div>
   </section>
 
-  <div id="email-modal" class="email-modal" role="dialog" aria-modal="true" aria-labelledby="email-modal-title" aria-describedby="email-modal-description">
-    <div class="email-modal__backdrop" data-close-modal></div>
-    <div class="email-modal__content">
-      <button class="email-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
-      <span class="email-modal__pill">Respuesta rápida</span>
-      <h3 id="email-modal-title">Contáctame por correo</h3>
-      <p id="email-modal-description">Si prefieres escribir directamente, puedes copiar mi correo.</p>
-
-      <div class="email-modal__card">
-        <img class="email-modal__image" src="assets/images/email.webp" alt="Ilustración de correo" loading="lazy" draggable="false">
-      </div>
-
-      <div class="email-modal__actions">
-        <button class="email-modal__copy" type="button">Copiar correo</button>
-      </div>
-      <p class="email-modal__status" aria-live="polite"></p>
-    </div>
-  </div>
-
-  <div id="cv-modal" class="email-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" aria-describedby="cv-modal-description">
-    <div class="email-modal__backdrop" data-close-modal></div>
-    <div class="email-modal__content cv-modal__content">
-      <button class="email-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
-      <span class="email-modal__pill">Selecciona tu idioma</span>
-      <h3 id="cv-modal-title">Descargar CV</h3>
-      <p id="cv-modal-description">Elige la versión que prefieras.</p>
-
-      <div class="cv-modal__actions">
-        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_ES_CV.pdf" download>
-          <span class="cv-modal__flag">🇲🇽</span>
-          <span>Español</span>
-        </a>
-        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_EN_CV.pdf" download>
-          <span class="cv-modal__flag">🇺🇸</span>
-          <span>English</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <section id="about">
-    <h2 class="section-title">Experiencia</h2>
+  <section id="about" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">Experiencia</h2>
     <p class="section-intro">Trayectoria profesional y formación académica</p>
     <div class="about-content">
-      <p class="about-item-title"><img src="assets/icons/job.svg" alt="" width="30" height="30"> Experiencia laboral</p>
+      <h3 class="about-item-title"><img src="assets/icons/job.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"> Experiencia laboral</h3>
       <div class="about-item">
         <div class="about-header">
-          <span class="about-title">Desarrollador Web Frontend</span>
+          <h4 class="about-title">Desarrollador Web Frontend</h4>
           <div class="about-subtitle">
-            <div class="about-company"><img src="assets/images/no2s.png" alt="company" width="60" height="60"></div>
+            <div class="about-company"><img src="assets/images/no2s.png" alt="Logotipo de No2S" loading="lazy" width="60" height="60"></div>
             <span class ="about-timelapse">2024 - 2026</span>
           </div>
         </div>
@@ -112,18 +74,18 @@
         </p>
         <div class="about-icons">
           <p class="about-icons-title">Tecnologías utilizadas:</p>
-          <img class="about-icon" src="assets/icons/html.svg" alt="html" width="30" height="30">
-          <img class="about-icon" src="assets/icons/css.svg" alt="css" width="30" height="30">
-          <img class="about-icon" src="assets/icons/js.svg" alt="javascript" width="30" height="30">
-          <img class="about-icon" src="assets/icons/react.svg" alt="react" width="30" height="30">
+          <img class="about-icon" src="assets/icons/html.svg" alt="HTML" loading="lazy" width="30" height="30">
+          <img class="about-icon" src="assets/icons/css.svg" alt="CSS" loading="lazy" width="30" height="30">
+          <img class="about-icon" src="assets/icons/js.svg" alt="JavaScript" loading="lazy" width="30" height="30">
+          <img class="about-icon" src="assets/icons/react.svg" alt="React" loading="lazy" width="30" height="30">
         </div>
       </div>
-      <p class="about-item-title"><img src="assets/icons/education.svg" alt="" width="30" height="30"> Formación académica</p>
+      <h3 class="about-item-title"><img src="assets/icons/education.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"> Formación académica</h3>
       <div class="about-item">
         <div class="about-header">
-          <span class="about-title">Licenciatura</span>
+          <h4 class="about-title">Licenciatura</h4>
           <div class="about-subtitle">
-            <div class="about-company"><img src="assets/images/uo.webp" alt="company" width="60" height="60"></div>
+            <div class="about-company"><img src="assets/images/uo.webp" alt="Logotipo de la Universidad de Oriente" loading="lazy" width="60" height="60"></div>
             <span class ="about-timelapse">2022 - 2026</span>
           </div>
         </div>
@@ -132,37 +94,41 @@
     </div>
   </section>
 
-  <section id="projects">
-    <h2 class="section-title">Proyectos</h2>
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 class="section-title" id="projects-title">Proyectos</h2>
     <p class="section-intro">Explora algunos de mis proyectos destacados</p>
-    <div id="projects-icons-container">
-      <a class="projects-icon-link" role="button" data-tech="html" aria-pressed="false">
-        <img src="assets/icons/html.svg" alt="html" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="css" aria-pressed="false">
-        <img src="assets/icons/css.svg" alt="css" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="js" aria-pressed="false">
-        <img src="assets/icons/js.svg" alt="javascript" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="react" aria-pressed="false">
-        <img src="assets/icons/react.svg" alt="react" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="tailwind" aria-pressed="false">
-        <img src="assets/icons/tailwind.svg" alt="tailwind" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="typescript" aria-pressed="false">
-        <img src="assets/icons/typescript.svg" alt="typescript" width="35" height="35">
-      </a>
-      <a class="projects-icon-link" role="button" data-tech="python" aria-pressed="false">
-        <img src="assets/icons/python.svg" alt="python" width="35" height="35">
-      </a>
+    <div id="projects-icons-container" role="group" aria-label="Filtrar proyectos por tecnología">
+      <button class="projects-icon-link projects-icon-all active" type="button" data-tech="all" aria-label="Mostrar todos los proyectos" aria-pressed="true">
+        <img src="assets/icons/all.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+        <span>All</span>
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="html" aria-label="Filtrar proyectos por HTML" aria-pressed="false">
+        <img src="assets/icons/html.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="css" aria-label="Filtrar proyectos por CSS" aria-pressed="false">
+        <img src="assets/icons/css.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="js" aria-label="Filtrar proyectos por JavaScript" aria-pressed="false">
+        <img src="assets/icons/js.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="react" aria-label="Filtrar proyectos por React" aria-pressed="false">
+        <img src="assets/icons/react.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="tailwind" aria-label="Filtrar proyectos por Tailwind" aria-pressed="false">
+        <img src="assets/icons/tailwind.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="typescript" aria-label="Filtrar proyectos por TypeScript" aria-pressed="false">
+        <img src="assets/icons/typescript.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
+      <button class="projects-icon-link" type="button" data-tech="python" aria-label="Filtrar proyectos por Python" aria-pressed="false">
+        <img src="assets/icons/python.svg" alt="" aria-hidden="true" loading="lazy" width="35" height="35">
+      </button>
     </div>
-    <div id="project-list"></div>
+    <div id="project-list" aria-live="polite"></div>
   </section>
 
-  <section id="contact">
-    <h2 class="section-title">Contacto</h2>
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contacto</h2>
     <p class="section-intro">¿Tienes un proyecto en mente o quieres charlar? Escríbeme y creemos algo increíble juntos.</p>
     <div class="contact-panel">
       <div class="contact-info">
@@ -171,15 +137,15 @@
         <p class="contact-copy">Estoy disponible para oportunidades como desarrollador Frontend y proyectos colaborativos. Responderé a tu mensaje a la brevedad.</p>
         <div class="contact-methods">
           <a class="contact-method" href="mailto:said200317@gmail.com">
-            <span class="contact-method-icon"><img src="assets/icons/email.svg" alt="" aria-hidden="true"></span>
+            <span class="contact-method-icon"><img src="assets/icons/email.svg" alt="" aria-hidden="true" loading="lazy"></span>
             <span class="contact-method-text"><span>Correo Electrónico</span><strong>said200317@gmail.com</strong></span>
           </a>
           <a class="contact-method" href="https://github.com/Teakosprey" target="_blank" rel="noopener noreferrer">
-            <span class="contact-method-icon"><img src="assets/icons/github_hero.svg" alt="" aria-hidden="true"></span>
+            <span class="contact-method-icon"><img src="assets/icons/github_hero.svg" alt="" aria-hidden="true" loading="lazy"></span>
             <span class="contact-method-text"><span>GitHub</span><strong>github.com/Teakosprey</strong></span>
           </a>
           <a class="contact-method" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank" rel="noopener noreferrer">
-            <span class="contact-method-icon"><img src="assets/icons/linkedin.svg" alt="" aria-hidden="true"></span>
+            <span class="contact-method-icon"><img src="assets/icons/linkedin.svg" alt="" aria-hidden="true" loading="lazy"></span>
             <span class="contact-method-text"><span>LinkedIn</span><strong>linkedin.com/in/abdiel-hernandez</strong></span>
           </a>
         </div>
@@ -189,29 +155,68 @@
           <span>Nombre</span>
           <span class="contact-input-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.5 3.2-5.5 7-5.5s6.3 2 7 5.5"></path></svg>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Tu nombre" required>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Tu nombre" required aria-required="true">
           </span>
         </label>
         <label class="contact-field" for="email">
           <span>Correo Electrónico</span>
           <span class="contact-input-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect><path d="m4.5 7 7.5 6 7.5-6"></path></svg>
-            <input class="form-control" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            <input class="form-control" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required aria-required="true">
           </span>
         </label>
         <label class="contact-field" for="message">
           <span>Mensaje</span>
           <span class="contact-input-wrap contact-message-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-9.5a7.5 7.5 0 1 1 17 0Z"></path><path d="M8 11h8M8 14h5"></path></svg>
-            <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje aquí..." required aria-required="true"></textarea>
           </span>
         </label>
         <button id="send" type="submit">
           <span>Enviar mensaje</span>
         </button>
+        <p id="contact-form-status" class="visually-hidden" aria-live="polite"></p>
       </form>
     </div>
   </section>
+  </main>
+
+  <div id="email-modal" class="email-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="email-modal-title" aria-describedby="email-modal-description" inert>
+    <div class="email-modal__backdrop" data-close-modal></div>
+    <div class="email-modal__content">
+      <button class="email-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
+      <span class="email-modal__pill">Respuesta rápida</span>
+      <h3 id="email-modal-title">Contáctame por correo</h3>
+      <p id="email-modal-description">Si prefieres escribir directamente, puedes copiar mi correo.</p>
+      <div class="email-modal__card">
+        <img class="email-modal__image" src="assets/images/email.webp" alt="Ilustración de correo" loading="lazy" draggable="false">
+      </div>
+      <div class="email-modal__actions">
+        <button class="email-modal__copy" type="button">Copiar correo</button>
+      </div>
+      <p class="email-modal__status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div id="cv-modal" class="email-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cv-modal-title" aria-describedby="cv-modal-description" inert>
+    <div class="email-modal__backdrop" data-close-modal></div>
+    <div class="email-modal__content cv-modal__content">
+      <button class="email-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
+      <span class="email-modal__pill">Selecciona tu idioma</span>
+      <h3 id="cv-modal-title">Descargar CV</h3>
+      <p id="cv-modal-description">Elige la versión que prefieras.</p>
+      <div class="cv-modal__actions">
+        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_ES_CV.pdf" download>
+          <span class="cv-modal__flag" aria-hidden="true">🇲🇽</span>
+          <span>Español</span>
+        </a>
+        <a class="cv-modal__option" href="assets/docs/Abdiel_Hernández_EN_CV.pdf" download>
+          <span class="cv-modal__flag" aria-hidden="true">🇺🇸</span>
+          <span>English</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-copy">
@@ -219,12 +224,11 @@
       <span>Diseñado con HTML, CSS y JavaScript.</span>
     </div>
     <nav class="footer-social" aria-label="Redes de contacto">
-      <a class="footer-link" href="mailto:said200317@gmail.com" aria-label="Correo electrónico"><img src="assets/icons/email.svg" alt="" aria-hidden="true"></a>
-      <a class="footer-link" href="https://github.com/Teakosprey" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/icons/github_hero.svg" alt="" aria-hidden="true"></a>
-      <a class="footer-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" aria-hidden="true"></a>
+      <a class="footer-link" href="mailto:said200317@gmail.com" aria-label="Correo electrónico"><img src="assets/icons/email.svg" alt="" aria-hidden="true" loading="lazy"></a>
+      <a class="footer-link" href="https://github.com/Teakosprey" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/icons/github_hero.svg" alt="" aria-hidden="true" loading="lazy"></a>
+      <a class="footer-link" href="https://www.linkedin.com/in/abdiel-hernandez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" aria-hidden="true" loading="lazy"></a>
     </nav>
   </footer>
-  <script src="assets/script.js"></script>
   <script src="assets/js/projects.js"></script>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/form.js"></script>

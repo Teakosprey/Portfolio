@@ -1,14 +1,4 @@
-/* Fluid layout adjustments below the desktop design breakpoint. */
-@media (max-width: 1200px) {
-  :root {
-    --page-padding: clamp(1rem, 4vw, 3rem);
-    --section-gap: clamp(2rem, 6vw, 5ch);
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
+@media (min-width: 821px) and (max-width: 1200px) {
   header {
     height: auto;
     min-height: 4.375rem;
@@ -37,16 +27,24 @@
   }
 
   #hero {
-    gap: clamp(2rem, 6vw, 5rem);
+    gap: clamp(1rem, 4vw, 3rem);
     padding-inline: var(--page-padding);
   }
 
+  #hero h2 {
+    height: auto;
+    min-height: 2rem;
+    white-space: normal;
+  }
+
   #hero-about {
-    width: min(70%, 42rem);
+    width: min(60%, 42rem);
+    min-width: 0;
   }
 
   #profile-img {
-    width: clamp(12rem, 30vw, 24rem);
+    width: clamp(10rem, 28vw, 22rem);
+    flex: 0 1 32%;
   }
 
   .about-content,
@@ -61,6 +59,10 @@
 
   #project-list {
     gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  #projects-icons-container {
+    margin: 1.5rem auto;
   }
 
   .project-card {
@@ -93,189 +95,11 @@
   }
 }
 
-@media (max-width: 820px) {
-  header nav {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    text-align: center;
-  }
-
-  .nav-menu-toggle {
-    display: block;
-    width: 100%;
-    border: 0;
-    color: inherit;
-    font: inherit;
-    background: transparent;
-    padding: 0.6rem 0.8rem;
-    cursor: pointer;
-  }
-
-  #nav-links {
-    display: block;
-  }
-
-  header nav a {
-    display: none;
-  }
-
-  header nav.is-open a {
-    display: block;
-    padding: 0.7rem 1rem;
-    background: var(--background-color, #fff);
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  header nav.is-open {
-    z-index: 10;
-  }
-
-  #hero {
-    flex-direction: column;
-    gap: clamp(1rem, 5vw, 1.5rem);
-    min-height: auto;
-    padding-top: clamp(2rem, 8vw, 3rem);
-    padding-bottom: clamp(2rem, 8vw, 3rem);
-    text-align: center;
-  }
-
-  #profile-img {
-    width: min(18rem, 60vw);
-    margin-top: 0;
-  }
-
-  #hero-about {
-    width: min(90%, 30rem);
-  }
-
-  #hero h1,
-  #hero h2,
-  #hero-aboutme {
-    text-align: center;
-  }
-
-  #hero h2 {
-    width: 100%;
-    height: auto;
-    min-height: 2.2rem;
-    white-space: normal;
-    border-right: 0;
-  }
-
-  #hero-aboutme {
-    font-size: clamp(0.8rem, 3.5vw, 1rem);
-  }
-
-  #hero-icons-container {
-    width: min(100%, 22rem);
-  }
-
-  .about-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .about-title,
-  .about-timelapse,
-  .about-description,
-  .card-description {
-    font-size: clamp(0.9rem, 3.5vw, 1.09rem);
-  }
-
-  .about-subtitle {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .about-content {
-    padding-left: 2rem;
-  }
-
-  .about-content::before {
-    left: .5rem;
-    transform: none;
-  }
-
-  .about-entry,
-  .about-entry:nth-child(odd),
-  .about-entry:nth-child(even) {
-    align-self: flex-end;
-    width: 100%;
-  }
-
-  .about-entry::before,
-  .about-entry:nth-child(odd)::before,
-  .about-entry:nth-child(even)::before {
-    left: -1.875rem;
-    right: auto;
-  }
-
-  .about-entry:nth-child(odd) .about-item-title {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  #projects-icons-container {
-    width: min(calc(100% - 2 * var(--page-padding)), 35rem);
-    margin-bottom: clamp(2rem, 7vw, 4rem);
-  }
-
-  .projects-icon-link {
-    padding: clamp(0.8rem, 3vw, 1.5rem) 0;
-  }
-
-  .projects-icon-link img {
-    width: clamp(2rem, 9vw, 2.8125rem);
-    height: auto;
-  }
-
-  #project-list {
-    grid-template-columns: 1fr;
-  }
-
-  .card-image {
-    margin: clamp(1rem, 5vw, 2rem) auto;
-  }
-
-  .card-link-container {
-    flex-wrap: wrap;
-  }
-
-  #contact {
-    min-height: auto;
-  }
-
-  #contact h2 {
-    font-size: clamp(1.5rem, 6vw, 2.25rem);
-  }
-}
-
 @media (max-width: 480px) {
-  .nav-indicator {
-    display: none;
-  }
-
-  header nav a {
-    flex: 1 1 50%;
-    padding-inline: 0.35rem;
-    text-align: center;
-  }
-
-  .about-content,
-  #project-list,
-  #projects-icons-container {
-    width: calc(100% - 2 * var(--page-padding));
-    margin-inline: auto;
-  }
-
   .about-content {
     border-radius: 1.5rem;
   }
-  
+
   .project-card,
   #contact-form {
     border-radius: 1.5rem;
@@ -290,22 +114,9 @@
   }
 }
 
-@media (max-width: 767px) {
-  .contact-panel {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-
-  .contact-info {
-    padding: .25rem;
-  }
-
-  .contact-method {
-    padding: .75rem;
-  }
-
-  footer {
-    align-items: flex-start;
-    flex-direction: column;
+@media (max-width: 820px) {
+  .nav-indicator,
+  .icon-indicator {
+    display: none;
   }
 }

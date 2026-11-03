@@ -3,6 +3,7 @@
   const inputEmail = document.getElementById('email');
   const inputMensaje = document.getElementById('message');
   const form = document.getElementById('contact-form');
+  const formStatus = document.getElementById('contact-form-status');
 
   if (inputNombre && inputEmail && inputMensaje) {
     inputNombre.addEventListener('invalid', function() {
@@ -38,6 +39,9 @@
     const asunto = encodeURIComponent(`Mensaje de ${nombre} desde tu portafolio`);
     const cuerpo = encodeURIComponent(`${mensaje}`);
 
+    if (formStatus) {
+      formStatus.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
+    }
     window.location.href = `mailto:said200318@outlook.com?subject=${asunto}&body=${cuerpo}`;
     form.reset();
   });

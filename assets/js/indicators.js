@@ -1,4 +1,8 @@
 (() => {
+  const indicatorsEnabled = () =>
+    !window.matchMedia('(max-width: 820px)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const iconContainer = document.getElementById('hero-icons-container');
   const iconLinks = [...document.querySelectorAll('.hero-icon-link')];
 
@@ -8,6 +12,8 @@
     iconContainer.appendChild(iconIndicator);
 
     function moveIconIndicator(link) {
+      if (!indicatorsEnabled()) return;
+
       const containerRect = iconContainer.getBoundingClientRect();
       const linkRect = link.getBoundingClientRect();
       const offsetLeft = linkRect.left - containerRect.left;
@@ -38,6 +44,8 @@
     projectIconContainer.appendChild(projectIconIndicator);
 
     function moveProjectIconIndicator(link) {
+      if (!indicatorsEnabled()) return;
+
       const containerRect = projectIconContainer.getBoundingClientRect();
       const linkRect = link.getBoundingClientRect();
       const offsetLeft = linkRect.left - containerRect.left;
@@ -58,20 +66,31 @@
       link.addEventListener('blur', hideProjectIconIndicator);
 
       // click -> toggle filter for this technology
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
+      link.addEventListener('click', () => {
         const tech = link.dataset.tech;
         if (!tech) return;
 
+        if (tech === 'all') {
+          window.activeProjectTech = null;
+          projectIconLinks.forEach((el) => {
+            const isActive = el.dataset.tech === 'all';
+            el.classList.toggle('active', isActive);
+            el.setAttribute('aria-pressed', String(isActive));
+          });
+          window.renderProjects(window.projectsData || []);
+          return;
+        }
+
         const isSameTech = window.activeProjectTech === tech;
+        window.activeProjectTech = isSameTech ? null : tech;
 
         projectIconLinks.forEach((el) => {
-          const isActive = !isSameTech && el.dataset.tech === tech;
+          const isActive = window.activeProjectTech
+            ? el.dataset.tech === window.activeProjectTech
+            : el.dataset.tech === 'all';
           el.classList.toggle('active', isActive);
           el.setAttribute('aria-pressed', String(isActive));
         });
-
-        window.activeProjectTech = isSameTech ? null : tech;
 
         const filtered = window.activeProjectTech
           ? (window.projectsData || []).filter(p => p.technologies.includes(window.activeProjectTech))

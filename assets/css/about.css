@@ -1,11 +1,14 @@
 .about-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     position: relative;
-    --about-item-width: 45%;
-    --about-timeline-gap: 3rem;
+    width: min(calc(100% - 3rem), 75rem);
+    margin-inline: auto;
+    padding: clamp(1.25rem, 4vw, 2rem) 1rem clamp(1.25rem, 4vw, 2rem) 2rem;
+    --about-item-width: 100%;
+    --about-timeline-gap: 1rem;
 }
 
 .about-content::before {
@@ -13,7 +16,7 @@
     position: absolute;
     top: 1.5rem;
     bottom: 3.5rem;
-    left: calc((100% - var(--about-item-width)) / 2 - var(--about-timeline-gap));
+    left: .5rem;
     width: 2px;
     border-radius: 2px;
     background: linear-gradient(
@@ -37,7 +40,7 @@
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: var(--text-shadow);
-    margin: 1rem auto;
+    margin: 1rem 0;
 }
 
 .about-item-title::before {
@@ -62,10 +65,11 @@
 }
 
 .about-item {
+    min-width: 0;
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
     margin: 0 auto 2rem;
-    padding: 2rem 2.5rem;
+    padding: clamp(1rem, 4vw, 1.5rem);
     width: var(--about-item-width);
     border-radius: var(--border-radius);
     transition: transform .3s ease-in-out;
@@ -73,8 +77,10 @@
 
 .about-header {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     margin-bottom: 1rem;
     padding-bottom: .5rem;
@@ -98,6 +104,8 @@
     display: flex;
     align-items: center;
     gap: .5rem;
+    width: 100%;
+    justify-content: space-between;
     border-radius: var(--border-radius);
     padding: .1rem .5rem;
 }
@@ -138,16 +146,60 @@
 
 .about-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.5rem;
+    gap: .75rem;
     border-top: .5px solid #333;
     padding: 1rem 0 .25rem;
 }
 
 .about-icons-title {
+    width: 100%;
     font-size: 1rem;
     color: var(--text-color);
     text-shadow: var(--text-shadow);
-    margin-right: 1rem;
+    margin-right: 0;
+}
+
+@media (min-width: 821px) {
+    .about-content {
+        align-items: center;
+        padding: 0;
+        --about-item-width: 45%;
+        --about-timeline-gap: 3rem;
+    }
+
+    .about-content::before {
+        left: calc((100% - var(--about-item-width)) / 2 - var(--about-timeline-gap));
+    }
+
+    .about-item-title {
+        margin: 1rem auto;
+    }
+
+    .about-item {
+        padding: 2rem 2.5rem;
+    }
+
+    .about-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .about-subtitle {
+        width: auto;
+        justify-content: initial;
+    }
+
+    .about-icons {
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+
+    .about-icons-title {
+        width: auto;
+        margin-right: 1rem;
+    }
 }
