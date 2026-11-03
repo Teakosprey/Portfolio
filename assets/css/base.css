@@ -1,8 +1,7 @@
 :root {
   --primary-color: #449667;
-  --primary-text-color: #9de3b8;
   --secondary-color: #202A34;
-  --hover-color: #4f4f4f;
+  --hover-color: #222;
   --text-color: #ffffff;
   --text-shadow: 3px 3px 2px #000;
   --background-color: #0F1720;
@@ -46,7 +45,7 @@ body {
   background: var(--background-color);
   color: #fff;
   line-height: 1.7;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 section {

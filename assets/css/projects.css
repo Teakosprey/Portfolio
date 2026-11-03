@@ -140,7 +140,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .card-link {
@@ -151,6 +151,7 @@
   text-decoration: none;
   margin: 0;
   padding: .4rem .7rem;
+  gap: .5rem;
   min-height: 3.125rem;
   transition: transform .3s ease-in-out;
 }
@@ -159,10 +160,6 @@
   font-size: .85em;
   font-weight: bold;
   color: var(--text-color);
-}
-
-.card-link:last-child span {
-  color: var(--background-color);
 }
 
 .card-link:first-child {

@@ -410,7 +410,7 @@
   }
 
   .hero-btn:hover {
-    color: var(--primary-text-color);
+    color: var(--primary-color);
     transform: scale(1.03);
     transition: transform .5s ease-in-out, color 0.4s ease;
   }
