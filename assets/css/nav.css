@@ -17,7 +17,6 @@ header {
 header nav {
   position: relative;
   width: 100%;
-  margin-left: auto;
   text-align: center;
 }
 
@@ -66,7 +65,7 @@ header nav a {
 }
 
 header nav a.active {
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
 
@@ -113,7 +112,7 @@ header nav a.active {
 
 @media (hover: hover) {
   header nav a:hover {
-    color: var(--primary-text-color);
+    color: var(--primary-color);
     transform: scaleX(1);
     transform-origin: center;
   }

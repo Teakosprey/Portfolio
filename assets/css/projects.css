@@ -37,7 +37,6 @@
   background: transparent;
   color: inherit;
   font: inherit;
-  transition: background-color .1s ease-out, transform 0.3s ease-in-out, opacity 0.25s ease;
   -webkit-user-select: none; /* Safari */
   user-select: none; 
   cursor: pointer;
@@ -49,25 +48,19 @@
   margin: 0;
 }
 
-.projects-icon-all {
-  flex-direction: column;
-  gap: .125rem;
-  padding: .625rem 0;
-  font-size: .75rem;
-  line-height: 1;
-}
-
-.projects-icon-all img {
-  width: 1.75rem;
-}
-
 .projects-icon-link.active {
   background: var(--hover-color);
   box-shadow: inset 0 0 0 2px var(--primary-color);
 }
 
-.projects-icon-link:focus-visible {
-  outline-offset: -3px;
+.projects-icon-link:first-child:hover,
+.projects-icon-link:first-child.active {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.projects-icon-link:last-of-type:hover,
+.projects-icon-link:last-of-type.active {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
   
 #project-list {
