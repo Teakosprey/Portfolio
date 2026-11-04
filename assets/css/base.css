@@ -55,24 +55,52 @@ section {
   box-sizing: border-box;
 }
 
-.scroll-reveal {
-  opacity: 0;
-}
+@supports (animation-timeline: view()) {
+  @keyframes scroll-reveal {
+    0% {
+      opacity: 0;
+      translate: 0 2rem;
+    }
+    25% {
+      opacity: 1;
+      translate: 0 0;
+    }
+    75% {
+      opacity: 1;
+      translate: 0 0;
+    }
+    100% {
+      opacity: 0;
+      translate: 0 -2rem;
+    }
+  }
 
-.scroll-reveal--left {
-  transform: translateX(-10rem);
-}
-
-.scroll-reveal--right {
-  transform: translateX(10rem);
-}
-
-.scroll-reveal--left.is-visible {
-  animation: hero-image-entry 1s ease-in-out both;
-}
-
-.scroll-reveal--right.is-visible {
-  animation: hero-content-entry 1s ease-in-out both;
+  :is(
+    .section-title,
+    .section-intro,
+    .about-item-title,
+    .about-title,
+    .about-timelapse,
+    .about-description,
+    .about-icons-title,
+    .about-icon,
+    .projects-icon-link,
+    .card-title,
+    .card-video,
+    .card-description,
+    .card-icon,
+    .card-link,
+    .contact-badge,
+    .contact-info > h3,
+    .contact-copy,
+    .contact-method,
+    .contact-field > span:first-child,
+    #send
+  ) {
+    animation: scroll-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
 }
 
 .section-title {
@@ -142,14 +170,6 @@ section {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .scroll-reveal,
-  .scroll-reveal--left,
-  .scroll-reveal--right {
-    animation: none !important;
-    opacity: 1;
-    transform: none;
   }
 
   *,
