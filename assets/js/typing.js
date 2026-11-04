@@ -4,8 +4,9 @@
 
   // Textos a mostrar en el efecto de typing
   const textos = [
-    "Ingeniero en Sistemas Computacionales",
-    "Desarrollador Web Frontend",
+    "Ingeniero en Sistemas",
+    "Ingeniero de Software",
+    "Desarrollador Frontend",
     "Desarrollador React"
   ];
 

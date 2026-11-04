@@ -8,7 +8,7 @@
     margin-inline: auto;
     padding: clamp(1.25rem, 4vw, 2rem) 1rem clamp(1.25rem, 4vw, 2rem) 2rem;
     --about-item-width: 100%;
-    --about-timeline-gap: 1rem;
+    --about-timeline-gap: 3rem;
 }
 
 .about-content::before {
@@ -40,7 +40,7 @@
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: var(--text-shadow);
-    margin: 1rem 0;
+    margin: 1rem 4rem;
 }
 
 .about-item-title::before {
@@ -111,7 +111,7 @@
 }
 
 .about-company {
-    width: 70px;
+    width: 90px;
     height: 60px;
     background-color: #e2e8f0f6;
     border-radius: .75rem;
