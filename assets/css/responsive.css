@@ -96,6 +96,16 @@
 }
 
 @media (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    justify-content: center;
+    text-align: center;
+  }
+
   #projects-icons-container {
     --tech-bar-icon-size: clamp(2rem, 5vw, 3rem); /* Filter icon size */
     --tech-bar-item-height: clamp(4rem, 10vw, 4.25rem); /* Touch target height */
