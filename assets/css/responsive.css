@@ -43,7 +43,7 @@
   }
 
   #profile-img {
-    width: clamp(10rem, 28vw, 22rem);
+    width: clamp(10rem, 28vw, 20rem);
     flex: 0 1 32%;
   }
 
