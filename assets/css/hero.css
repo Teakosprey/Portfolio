@@ -26,7 +26,7 @@
 }
 
 #profile-img {
-  width: min(18rem, 60vw);
+  width: min(10rem, 60vw);
   -webkit-user-select: none;
   user-select: none;
   margin-top: 0;

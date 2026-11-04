@@ -195,15 +195,11 @@
   box-shadow: 0 0 0 3px rgba(68, 150, 103, .16);
 }
 
-.contact-input-wrap > svg{
+.contact-input-wrap > img {
   flex: 0 0 1.15rem;
   width: 1.15rem;
   height: 1.15rem;
-  fill: none;
-  stroke: var(--primary-color);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
+  object-fit: contain;
 }
 
 #contact .form-control {
@@ -235,7 +231,7 @@
   padding-top: .65rem;
 }
 
-.contact-message-wrap > svg {
+.contact-message-wrap > img {
   height: 1.44rem;
   margin: .9rem 0 0;
 }
